@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
 // import ShinyButton from "@/components/ui/shiny-button";
 // import { RainbowButton } from "@/components/ui/rainbow-button";
 // import { cn } from "@/lib/utils";
@@ -12,12 +12,12 @@ const Header: React.FC = () => {
 //   const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury'>('light');
 
   // Morphing text items
-  const words = [
-    "Android Dev",
-    "Web Dev",
-    "AI/ML",
-    "UI/UX Design",
-  ];
+//   const words = [
+//     "Android Dev",
+//     "Web Dev",
+//     "AI/ML",
+//     "UI/UX Design",
+//   ];
 
   // Load theme from localStorage on initial load
 //   useEffect(() => {

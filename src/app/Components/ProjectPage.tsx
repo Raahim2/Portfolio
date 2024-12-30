@@ -103,7 +103,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
         desc='Live Demo/Code for the projects I have made'
       />
       
-      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {projects.map((project, index) => (
           <Slide key={index}>
             <ProjectCard

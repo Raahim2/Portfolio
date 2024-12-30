@@ -4,7 +4,7 @@ import Slide from "./SlideAnimation";
 import NumberTicker from "@/components/ui/number-ticker";
 
 interface StatsProps {
-  theme: "light" | "dark" | "fire" | "luxury" | "blue" | "green";
+  theme: "light" | "dark" | "fire" | "luxury" | "lightning" | "hacker";
   s1: number;
   s2: number;
   s3: number;
@@ -29,11 +29,11 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
           bg: "bg-gradient-to-r from-white via-yellow-200 to-white",
           txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#FFD700] via-[#FFAC33] to-[#FF6347] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
         },
-        blue: {
+        lightning: {
           bg: "bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500",
           txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#1E3A8A] via-[#3B82F6] to-[#60A5FA] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
         },
-        green: {
+        hacker: {
           bg: "bg-gradient-to-r from-green-500 via-green-200 to-green-500",
           txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#22C55E] via-[#10B981] to-[#4ADE80] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
         },
@@ -48,7 +48,7 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
 
         <div className="flex flex-wrap -m-4 text-center w-3/4 mx-auto">
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <div className="border-2 border-black px-4 py-6 rounded-lg">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -69,7 +69,7 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <div className="border-2 border-black px-4 py-6 rounded-lg">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -90,7 +90,7 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <div className="border-2 border-black px-4 py-6 rounded-lg">
               <svg
                 fill="none"
                 stroke="currentColor"
@@ -110,7 +110,7 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
-            <div className="border-2 border-gray-200 px-4 py-6 rounded-lg">
+            <div className="border-2 border-black px-4 py-6 rounded-lg">
               <svg
                 fill="none"
                 stroke="currentColor"

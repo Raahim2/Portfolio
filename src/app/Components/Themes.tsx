@@ -5,7 +5,7 @@ import Info from "./Info";
 import ThemeCard from "./ThemeCard";
 
 // Define the allowed theme types explicitly
-type Theme = "light" | "dark" | "fire" | "luxury" | "blue" | "green";
+type Theme = "light" | "dark" | "fire" | "luxury" | "lightning" | "hacker";
 
 interface ThemeSectionProps {
   setTheme: React.Dispatch<React.SetStateAction<Theme>>;
@@ -19,12 +19,12 @@ const ThemeSection: React.FC<ThemeSectionProps> = ({ theme, setTheme }) => {
     dark: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
     fire: "bg-gradient-to-r from-white via-orange-200 to-white text-black",
     luxury: "bg-gradient-to-r from-white via-yellow-200 to-white text-black",
-    blue: "bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 text-white", // new theme
-    green: "bg-gradient-to-r from-green-500 via-green-200 to-green-500 text-white", // new theme
+    lightning: "bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500 text-white", // new theme
+    hacker: "bg-gradient-to-r from-green-500 via-green-200 to-green-500 text-white", // new theme
   };
 
   // List of themes
-  const themes: Theme[] = ["light", "dark", "fire", "luxury", "blue", "green"];
+  const themes: Theme[] = ["light", "dark", "fire", "luxury", "lightning", "hacker"];
 
   return (
     <section className={`${themeClasses[theme]} py-10 px-4`}>

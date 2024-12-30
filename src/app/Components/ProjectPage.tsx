@@ -7,7 +7,7 @@ import Slide from './SlideAnimation';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 
 interface ProjectPageProps {
-  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green'; // Define theme types here
+  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'; // Define theme types here
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
@@ -74,8 +74,8 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
     dark: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
     fire: "bg-gradient-to-r from-white via-orange-300 to-white text-black",
     luxury: "bg-gradient-to-r from-white via-yellow-200 to-white text-black",
-    blue: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 text-white", // distinct blue theme
-    green: "bg-gradient-to-r from-green-500 via-green-300 to-green-500 text-white", // distinct green theme
+    lightning: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 text-white", // distinct blue theme
+    hacker: "bg-gradient-to-r from-green-500 via-green-300 to-green-500 text-white", // distinct green theme
   };
 
   return (

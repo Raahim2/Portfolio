@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 // Define the NavbarProps interface to specify the theme type
 interface NavbarProps {
-  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green';
+  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker';
 }
 
 const Navbar: React.FC<NavbarProps> = ({ theme }) => {
@@ -28,11 +28,11 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
       bg: "bg-gradient-to-r from-white to-yellow-200",
       txt: "text-yellow-500 text-xl",
     },
-    blue: {
+    lightning: {
       bg: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500",
       txt: "text-white text-xl",
     },
-    green: {
+    hacker: {
       bg: "bg-gradient-to-r from-green-500 via-green-300 to-green-500",
       txt: "text-white text-xl",
     },

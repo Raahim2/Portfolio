@@ -5,7 +5,7 @@ import BoxReveal from "@/components/ui/box-reveal";
 import { Cloud } from "./Cloud";
 
 interface HeaderProps {
-  theme: "light" | "dark" | "fire" | "luxury" | "blue" | "green";
+  theme: "light" | "dark" | "fire" | "luxury" | "lightning" | "hacker";
 }
 
 const Header: React.FC<HeaderProps> = ({ theme }) => {
@@ -28,11 +28,11 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
       bg: "bg-gradient-to-r from-white via-yellow-200 to-white",
       txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#FFD700] via-[#FFAC33] to-[#FF6347] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
     },
-    blue: {
+    lightning: {
       bg: "bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500",
       txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#1E3A8A] via-[#3B82F6] to-[#60A5FA] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
     },
-    green: {
+    hacker: {
       bg: "bg-gradient-to-r from-green-500 via-green-200 to-green-500",
       txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#22C55E] via-[#10B981] to-[#4ADE80] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
     },

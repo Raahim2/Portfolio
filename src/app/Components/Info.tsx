@@ -7,7 +7,7 @@ import FadeInOnScroll from "./ScrollAnimation";
 const Info: React.FC<{ name: string; title: string; desc: string }> = ({ name, title, desc }) => {
   return (
     <FadeInOnScroll>
-    <section className="py-16">
+    <section className="py-4">
       {/* Wrap the entire content with BlurFade */}
         <div className="flex justify-center items-center">
           <AnimatedGradientText>

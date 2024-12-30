@@ -4,6 +4,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import Info from './Info';
 import Slide from './SlideAnimation';
+import { RainbowButton } from '@/components/ui/rainbow-button';
 
 interface ProjectPageProps {
   theme: 'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green'; // Define theme types here
@@ -65,24 +66,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
       githubLink: "https://github.com/Raahim2/Plant-Disease-Classification",
       videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
       timePeriod: "Oct 2023 - Nov 2023"
-    },
-    {
-      title: "Expense Tracker",
-      description: "A web application that allows users to track their expenses, providing insights into spending habits and helping manage finances effectively.",
-      techStack: ['JavaScript', 'Node.js', 'MongoDB', 'Express.js', 'HTML', 'CSS'],
-      link: "https://github.com/Raahim2/Expense-Tracker",
-      githubLink: "https://github.com/Raahim2/Expense-Tracker",
-      videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-      timePeriod: "Sep 2023 - Oct 2023"
-    },
-    {
-      title: "Weather App",
-      description: "A mobile application that provides real-time weather updates, forecasts, and alerts based on user location.",
-      techStack: ['React Native', 'JavaScript', 'OpenWeather API', 'Redux', 'HTML', 'CSS'],
-      link: "https://github.com/Raahim2/Weather-App",
-      githubLink: "https://github.com/Raahim2/Weather-App",
-      videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-      timePeriod: "Aug 2023 - Sep 2023"
     }
   ];
 
@@ -103,7 +86,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
         desc='Live Demo/Code for the projects I have made'
       />
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8 w-3/4 mx-auto">
         {projects.map((project, index) => (
           <Slide key={index}>
             <ProjectCard
@@ -117,6 +100,10 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
             />
           </Slide>
         ))}
+      </div>
+      
+      <div className="flex justify-center mt-8">
+        <RainbowButton className="text-center">View All Projects</RainbowButton>
       </div>
     </div>
   );

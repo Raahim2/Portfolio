@@ -3,6 +3,7 @@
 import Navbar from "./Components/NavBar";
 import Header from "./Components/Header";
 import Themes from "./Components/Themes";
+import Stats from "./Components/Stats";
 import ProjectPage from "./Components/ProjectPage";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,7 @@ export default function Home() {
         <Navbar theme={theme}/>
         <Header theme={theme}/>
         <Themes theme={theme} setTheme={setTheme}/>
+        <Stats theme={theme} s1={23} s2={12} s3={16} s4={3}/>
         <ProjectPage theme={theme}/>
       </div>
       <AnimatedGridPattern

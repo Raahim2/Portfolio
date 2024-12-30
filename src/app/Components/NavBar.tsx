@@ -3,12 +3,14 @@
 import { useState } from 'react';
 import Link from 'next/link';
 
-export default function Navbar() {
+// Define the NavbarProps interface to specify the theme type
+interface NavbarProps {
+  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green';
+}
+
+const Navbar: React.FC<NavbarProps> = ({ theme }) => {
   const [isOpen, setIsOpen] = useState(false); // State to toggle the mobile menu
 
-  const theme = "light"; // You can make this dynamic later if needed
-
-  // Apply theme classes based on the selected theme
   const themeClasses = {
     light: {
       bg: "bg-gradient-to-r from-white via-blue-100 to-white",
@@ -25,6 +27,14 @@ export default function Navbar() {
     luxury: {
       bg: "bg-gradient-to-r from-white to-yellow-200",
       txt: "text-yellow-500 text-xl",
+    },
+    blue: {
+      bg: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500",
+      txt: "text-white text-xl",
+    },
+    green: {
+      bg: "bg-gradient-to-r from-green-500 via-green-300 to-green-500",
+      txt: "text-white text-xl",
     },
   };
 
@@ -87,4 +97,6 @@ export default function Navbar() {
       )}
     </header>
   );
-}
+};
+
+export default Navbar;

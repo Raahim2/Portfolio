@@ -3,25 +3,28 @@
 import { useState, useEffect } from "react";
 import Info from "./Info";
 
-
-
 // Define the allowed theme types explicitly
-type Theme = "light" | "dark" | "fire" | "luxury";
+type Theme = "light" | "dark" | "fire" | "luxury" | "blue" | "green";
 
-const ThemeSection: React.FC = () => {
-  const [theme, setTheme] = useState<Theme>("light");
+interface ThemeSectionProps {
+  setTheme: React.Dispatch<React.SetStateAction<Theme>>;
+  theme: Theme;
+}
 
+const ThemeSection: React.FC<ThemeSectionProps> = ({ theme, setTheme }) => {
+
+  // Effect to load the theme from localStorage on component mount
   useEffect(() => {
-    // Retrieve theme from localStorage when the component mounts
-    const savedTheme = localStorage.getItem("theme") as Theme | null;  // Ensure the saved theme is a valid one
+    const savedTheme = localStorage.getItem("theme") as Theme;
     if (savedTheme) {
       setTheme(savedTheme);
     }
-  }, []);
+  }, [setTheme]);
 
+  // Handle theme change and store it in localStorage
   const handleThemeChange = (newTheme: Theme) => {
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme); 
+    localStorage.setItem("theme", newTheme); // Save theme to localStorage
     window.location.reload(); // Reload page to apply theme changes
   };
 
@@ -30,88 +33,74 @@ const ThemeSection: React.FC = () => {
     light: "bg-gradient-to-r from-white via-blue-100 to-white text-black",
     dark: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
     fire: "bg-gradient-to-r from-white via-orange-300 to-white text-black",
-    luxury: "bg-gradient-to-r from-white  via-yellow-200 to-white text-black",
-
+    luxury: "bg-gradient-to-r from-white via-yellow-200 to-white text-black",
+    blue: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 text-white", // new theme
+    green: "bg-gradient-to-r from-green-500 via-green-300 to-green-500 text-white", // new theme
   };
 
   return (
-    
     <section className={`${themeClasses[theme]} py-16`}>
-      <Info name="Select Theme" title="Before Getting Started, Explore Our Themes" desc="Choose from a variety of beautifully designed themes to jumpstart the exploration"/>
-      
-  
-      <div className="container mx-auto px-6 text-center">
-       
-        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <Info
+        name="Select Theme"
+        title="Before Getting Started, Explore Our Themes"
+        desc="Choose from a variety of beautifully designed themes to jumpstart the exploration"
+      />
+      <div className="container mx-auto px-6 text-center flex justify-center">
+        <div className="mt-12 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 items-center">
           {/* Theme 1 (Light) */}
           <div
             onClick={() => handleThemeChange("light")}
-            className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer"
+            className="w-24 h-24 flex flex-col justify-center items-center rounded-lg bg-gradient-to-r from-purple-500 to-blue-500 hover:scale-105 transition-transform duration-300"
           >
-            <div className="w-full h-48 bg-gradient-to-r from-purple-500 to-blue-500 flex justify-center items-center">
-              <svg className="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M12 2v20M2 12h20" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold">Light</h3>
-              <p className="text-gray-500 mt-2">A sleek, modern design for your app.</p>
-            </div>
+            <img src="medal.svg" alt="Medal" className="w-16 h-16 text-white" />
+            <p className="mt-2 text-sm font-semibold text-white">Light</p>
           </div>
 
           {/* Theme 2 (Dark) */}
           <div
             onClick={() => handleThemeChange("dark")}
-            className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer"
+            className="w-24 h-24 flex flex-col justify-center items-center rounded-lg bg-gradient-to-r from-green-400 to-blue-400 hover:scale-105 transition-transform duration-300"
           >
-            <div className="w-full h-48 bg-gradient-to-r from-green-400 to-blue-400 flex justify-center items-center">
-              <svg className="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 3h14v18H5z" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold">Dark</h3>
-              <p className="text-gray-500 mt-2">An innovative dashboard theme with vibrant colors.</p>
-            </div>
+            <img src="medal.svg" alt="Medal" className="w-16 h-16 text-white" />
+            <p className="mt-2 text-sm font-semibold text-white">Dark</p>
           </div>
 
           {/* Theme 3 (Fire) */}
           <div
             onClick={() => handleThemeChange("fire")}
-            className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer"
+            className="w-24 h-24 flex flex-col justify-center items-center rounded-lg bg-gradient-to-r from-pink-500 to-yellow-500 hover:scale-105 transition-transform duration-300"
           >
-            <div className="w-full h-48 bg-gradient-to-r from-pink-500 to-yellow-500 flex justify-center items-center">
-              <svg className="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <circle cx="12" cy="12" r="10" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold">Fire</h3>
-              <p className="text-gray-500 mt-2">A clean and modern landing page template.</p>
-            </div>
+            <img src="medal.svg" alt="Medal" className="w-16 h-16 text-white" />
+            <p className="mt-2 text-sm font-semibold text-white">Fire</p>
           </div>
 
           {/* Theme 4 (Luxury) */}
           <div
             onClick={() => handleThemeChange("luxury")}
-            className="group relative bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition-all duration-300 ease-in-out cursor-pointer"
+            className="w-24 h-24 flex flex-col justify-center items-center rounded-lg bg-gradient-to-r from-indigo-500 to-teal-500 hover:scale-105 transition-transform duration-300"
           >
-            <div className="w-full h-48 bg-gradient-to-r from-indigo-500 to-teal-500 flex justify-center items-center">
-              <svg className="w-12 h-12 text-white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="3" width="18" height="18" rx="2" />
-              </svg>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold">Luxury</h3>
-              <p className="text-gray-500 mt-2">A theme ideal for building admin interfaces.</p>
-            </div>
+            <img src="medal.svg" alt="Medal" className="w-16 h-16 text-white" />
+            <p className="mt-2 text-sm font-semibold text-white">Luxury</p>
           </div>
 
-          
+          {/* Theme 5 (Blue) */}
+          <div
+            onClick={() => handleThemeChange("blue")}
+            className="w-24 h-24 flex flex-col justify-center items-center rounded-lg bg-gradient-to-r from-blue-500 to-blue-400 hover:scale-105 transition-transform duration-300"
+          >
+            <img src="medal.svg" alt="Medal" className="w-16 h-16 text-white" />
+            <p className="mt-2 text-sm font-semibold text-white">Blue</p>
+          </div>
+
+          {/* Theme 6 (Green) */}
+          <div
+            onClick={() => handleThemeChange("green")}
+            className="w-24 h-24 flex flex-col justify-center items-center rounded-lg bg-gradient-to-r from-green-500 to-green-400 hover:scale-105 transition-transform duration-300"
+          >
+            <img src="medal.svg" alt="Medal" className="w-16 h-16 text-white" />
+            <p className="mt-2 text-sm font-semibold text-white">Green</p>
+          </div>
         </div>
-
-        
-
       </div>
     </section>
   );

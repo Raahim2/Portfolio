@@ -1,33 +1,31 @@
-// import React, { useEffect, useState } from "react";
-// import ShinyButton from "@/components/ui/shiny-button";
-// import { RainbowButton } from "@/components/ui/rainbow-button";
-// import { cn } from "@/lib/utils";
-// import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
-// import WordRotate from "@/components/ui/word-rotate";
-// import BoxReveal from "@/components/ui/box-reveal"
+import React, { useEffect, useState } from "react";
+import ShinyButton from "@/components/ui/shiny-button";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { cn } from "@/lib/utils";
+import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
+import WordRotate from "@/components/ui/word-rotate";
+import BoxReveal from "@/components/ui/box-reveal"
 import { Cloud }  from "./Cloud"
 
 
 const Header: React.FC = () => {
-//   const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury'>('light');
 
   // Morphing text items
-//   const words = [
-//     "Android Dev",
-//     "Web Dev",
-//     "AI/ML",
-//     "UI/UX Design",
-//   ];
+  const words = [
+    "Android Dev",
+    "Web Dev",
+    "AI/ML",
+    "UI/UX Design",
+  ];
 
   // Load theme from localStorage on initial load
-//   useEffect(() => {
-//     const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'fire' | 'luxury';
-//     if (savedTheme) {
-//       setTheme(savedTheme);
-//     }
-//   }, []);
-
-    const theme = "light"
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'fire' | 'luxury';
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
 
   const themeClasses = {
     light: {
@@ -51,14 +49,23 @@ const Header: React.FC = () => {
   return (
     <header className={`relative h-[80vh] w-full ${themeClasses[theme].bg}`}>
       {/* Animated Grid Pattern Background */}
-      
+      <AnimatedGridPattern
+        numSquares={30}
+        maxOpacity={0.1}
+        duration={3}
+        repeatDelay={1}
+        className={cn(
+          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
+          "absolute inset-0 h-full w-full skew-y-12"
+        )}
+      />
       <div className="float-right">
         <Cloud/>
       </div>
 
       <div className="relative z-10 flex h-full flex-col justify-center px-10">
         {/* Compatibility Section */}
-      {/* <BoxReveal boxColor={"#5046e6"} duration={0.5}> */}
+      <BoxReveal boxColor={"#5046e6"} duration={0.5}>
 
         <div className="flex w-fit items-center gap-4 rounded-md border border-gray-200 bg-gray-100 px-4 py-2">
           <span className="text-gray-600 text-sm font-semibold">Skilled in:</span>
@@ -81,26 +88,27 @@ const Header: React.FC = () => {
             <span className="text-sm text-gray-500">+ More</span>
           </div>
         </div>
-      {/* </BoxReveal> */}
+      </BoxReveal>
 
 
-        <div >
+        <BoxReveal boxColor={"#5046e6"} duration={0.5}>
           <h1 className="my-2 text-1xl md:text-5xl font-bold leading-tight">
           Transforming the <br /> digital world with 
           <span className="inline align-baseline">
-              {/* className={`${themeClasses[theme].txt} `} */}
-              Android
-              {/* words={words} */}
+            <WordRotate
+              className={`${themeClasses[theme].txt} `}
+              words={words}
+            /> 
           </span>
           </h1>
-        </div>
+        </BoxReveal>
 
 
         
 
         {/* Action Buttons */}
         <div className="mt-8 flex gap-4">
-        {/* <BoxReveal boxColor={"#5046e6"} duration={0.5}>
+        <BoxReveal boxColor={"#5046e6"} duration={0.5}>
           <ShinyButton className="py-2 birder">Get Started</ShinyButton>
         </BoxReveal>
 
@@ -108,7 +116,7 @@ const Header: React.FC = () => {
           <RainbowButton>
             <code>npm i -D Resume@latest</code>
           </RainbowButton>
-        </BoxReveal> */}
+        </BoxReveal>
 
         </div>
       </div>

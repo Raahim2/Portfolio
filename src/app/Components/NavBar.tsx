@@ -43,7 +43,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" >
-          <p className={`${themeClasses[theme].txt} font-extrabold`} >Raahim's Portfolio</p>
+          <p className={`${themeClasses[theme].txt} font-extrabold`} >Raahim&apos;s Portfolio</p>
         </Link>
 
         {/* Desktop Menu */}

@@ -1,18 +1,20 @@
-"use client";
+// "use client";
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 
 export default function Navbar() {
-  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury'>('light');
+  // const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury'>('light');
 
   // Load theme from localStorage on initial load
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'fire' | 'luxury';
-    if (savedTheme) {
-      setTheme(savedTheme);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const savedTheme = localStorage.getItem('theme') as 'light' | 'dark' | 'fire' | 'luxury';
+  //   if (savedTheme) {
+  //     setTheme(savedTheme);
+  //   }
+  // }, []);
+  // setTheme("light")
+  const theme = "light"
 
   // Apply theme classes based on the selected theme
   const themeClasses = {

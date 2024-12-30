@@ -22,6 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   timePeriod,
 }) => {
   return (
+
     <div className="rounded-lg bg-white text-black flex flex-col overflow-hidden border hover:shadow-lg transition-all duration-300 ease-out h-full">
       {/* Video Section */}
       <a className="block cursor-pointer" href={link}>
@@ -72,6 +73,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         </div>
       </div>
     </div>
+
   );
 };
 

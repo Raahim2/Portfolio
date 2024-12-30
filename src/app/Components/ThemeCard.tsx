@@ -1,4 +1,5 @@
 import React from "react";
+import FadeInOnScroll from "./ScrollAnimation";
 
 type Theme = "light" | "dark" | "fire" | "luxury" | "blue" | "green";
 
@@ -13,6 +14,7 @@ const ThemeCard: React.FC<ThemeCardProps> = ({ themeName, setTheme }) => {
   };
 
   return (
+    <FadeInOnScroll>
     <div className="flex flex-col items-center">
       <div
         onClick={handleThemeChange}
@@ -20,9 +22,11 @@ const ThemeCard: React.FC<ThemeCardProps> = ({ themeName, setTheme }) => {
       >
         <img src="/medal.svg" alt="Theme Icon" className="w-12 h-12" />
       </div>
-      {/* Theme name outside the box */}
       <p className="mt-2 text-sm font-semibold text-black capitalize">{themeName}</p>
     </div>
+    </FadeInOnScroll>
+    
+
   );
 };
 

@@ -3,13 +3,14 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import Info from './Info';
+import Slide from './SlideAnimation';
 
 interface ProjectPageProps {
-  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green' ; // Define theme types here
+  theme: 'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green'; // Define theme types here
 }
 
 const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
-  
+
   const projects = [
     {
       title: "Predictive AI",
@@ -84,9 +85,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
       timePeriod: "Aug 2023 - Sep 2023"
     }
   ];
-  
-  
-  
+
   const themeClasses = {
     light: "bg-gradient-to-r from-white via-blue-100 to-white text-black",
     dark: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
@@ -104,18 +103,19 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
         desc='Live Demo/Code for the projects I have made'
       />
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+      <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {projects.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            techStack={project.techStack}
-            link={project.link}
-            githubLink={project.githubLink}
-            videoSrc={project.videoSrc}
-            timePeriod={project.timePeriod}
-          />
+          <Slide key={index}>
+            <ProjectCard
+              title={project.title}
+              description={project.description}
+              techStack={project.techStack}
+              link={project.link}
+              githubLink={project.githubLink}
+              videoSrc={project.videoSrc}
+              timePeriod={project.timePeriod}
+            />
+          </Slide>
         ))}
       </div>
     </div>

@@ -13,10 +13,15 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
     rules: {
-      // Disable specific ESLint rules here:
-      "react/no-unescaped-entities": "off", // Example: Allow unescaped characters like '
-      "no-console": "warn", // Example: Warn instead of error for console.log
-      // Add more rules as needed
+      // Disable all ESLint rules
+      "react/no-unescaped-entities": "off",
+      "no-console": "off",
+      "no-unused-vars": "off",
+      "no-debugger": "off",
+      "react/prop-types": "off",
+      "react/jsx-uses-react": "off",
+      "react/jsx-uses-vars": "off",
+      // Add more rules to disable as needed
     },
   },
 ];

@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 
 export default function Home() {
-  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'blue' | 'green'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('light');
 
   return (
     <div className="w-full h-screen">

@@ -23,7 +23,7 @@ export default function Home() {
         <Education theme={theme}/>
         <Stats theme={theme} s1={23} s2={12} s3={16} s4={3}/>
         <ProjectPage theme={theme}/>
-        <Skills/>
+        <Skills theme={theme}/>
       </div>
       <AnimatedGridPattern
         numSquares={30}

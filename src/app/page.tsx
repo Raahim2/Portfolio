@@ -6,6 +6,7 @@ import Themes from "./Components/Themes";
 import Stats from "./Components/Stats";
 import ProjectPage from "./Components/ProjectPage";
 import Education from "./Components/Education";
+import Skills from "./Components/Skills";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
@@ -22,6 +23,7 @@ export default function Home() {
         <Education theme={theme}/>
         <Stats theme={theme} s1={23} s2={12} s3={16} s4={3}/>
         <ProjectPage theme={theme}/>
+        <Skills/>
       </div>
       <AnimatedGridPattern
         numSquares={30}

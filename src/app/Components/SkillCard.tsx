@@ -6,23 +6,28 @@ import { useMotionTemplate, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 export const SkillCard = ({
-  icon,
   name,
   className,
 }: {
-  icon?: React.ReactNode; // Accept any JSX as the icon
-  name: string; // Skill name
+  name: string; // Skill name, which will be used to load the SVG icon
   className?: string;
 }) => {
   let mouseX = useMotionValue(0);
   let mouseY = useMotionValue(0);
 
   const [randomString, setRandomString] = useState("");
+  const [iconSrc, setIconSrc] = useState("");
 
   useEffect(() => {
     let str = generateRandomString(1500);
     setRandomString(str);
-  }, []);
+
+    // Generate icon path based on the skill name
+    const iconPath = `/SVG/Skills/${name.toLowerCase().replace(/\s+/g, '_')}.svg`; // Replaces spaces with underscores
+
+
+    setIconSrc(iconPath);
+  }, [name]);
 
   function onMouseMove({ currentTarget, clientX, clientY }: any) {
     let { left, top } = currentTarget.getBoundingClientRect();
@@ -58,7 +63,9 @@ export const SkillCard = ({
           <div className="relative z-10 flex flex-col items-center justify-center">
             <div className="relative h-20 w-20 rounded-full flex items-center justify-center text-white font-bold text-2xl">
               <div className="absolute w-full h-full bg-white/[0.8] dark:bg-black/[0.8] blur-sm rounded-full" />
-              <span className="dark:text-white text-black z-20">{icon}</span>
+              {iconSrc && (
+                <img src={iconSrc} alt={name} className="z-20 w-12 h-12 object-contain" />
+              )}
             </div>
             <p className="mt-2 text-sm font-medium dark:text-white text-black">
               {name}
@@ -94,7 +101,7 @@ export function CardPattern({ mouseX, mouseY, randomString }: any) {
 }
 
 const characters =
-  "10"
+  "10";
 export const generateRandomString = (length: number) => {
   let result = "";
   for (let i = 0; i < length; i++) {

@@ -1,34 +1,40 @@
-import React from "react";
-// import { FaHtml5, FaCss3Alt, FaJs, FaPython, FaCuttlefish, FaJava, FaDatabase, FaGit, FaAndroid, FaCode } from "react-icons/fa";
-import {
-  FaHtml5, FaCss3Alt, FaJs, FaPython, FaJava, FaCuttlefish, FaDatabase, FaPhp, FaSwift, FaAngular, FaReact, FaNodeJs, FaVuejs,
-  FaGit, FaDocker, FaAws, FaLinux, FaAndroid, FaGitlab, FaSass, FaCodepen, FaNpm, FaYarn, FaJenkins,
-  FaCloud, FaGoogleDrive, FaSlack, FaTrello, FaTable, FaChartBar, FaCloudsmith, FaGithub, FaGitAlt
-} from "react-icons/fa";
-
+import React, { useState } from "react";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Importing icons for collapse/expand
 import Info from "./Info";
 import { SkillCard } from "@/app/Components/SkillCard";
 
-const skills = [
-  { name: "HTML", icon: <FaHtml5 className="text-orange-500 w-16 h-16" /> },
-  { name: "CSS", icon: <FaCss3Alt className="text-blue-500 w-16 h-16" /> },
-  { name: "JavaScript", icon: <FaJs className="text-yellow-500 w-16 h-16" /> },
-  { name: "Python", icon: <FaPython className="text-blue-500 w-16 h-16" /> },
-  { name: "Java", icon: <FaJava className="text-red-500 w-16 h-16" /> },
-  { name: "C (Programming)", icon: <FaCuttlefish className="text-blue-500 w-16 h-16" /> },
-  { name: "SQL", icon: <FaDatabase className="text-blue-500 w-16 h-16" /> },
-  { name: "React", icon: <FaReact className="text-blue-500 w-16 h-16" /> },
-  { name: "Node.js", icon: <FaNodeJs className="text-green-500 w-16 h-16" /> },
-  { name: "Git", icon: <FaGit className="text-orange-500 w-16 h-16" /> },
-  { name: "Android", icon: <FaAndroid className="text-green-500 w-16 h-16" /> },
-  { name: "npm", icon: <FaNpm className="text-red-500 w-16 h-16" /> },
-  { name: "Cloud", icon: <FaCloud className="text-blue-500 w-16 h-16" /> },
-  { name: "Google Drive", icon: <FaGoogleDrive className="text-blue-500 w-16 h-16" /> },
-  { name: "Data Tables", icon: <FaTable className="text-blue-500 w-16 h-16" /> },
-  { name: "Data Visualization", icon: <FaChartBar className="text-blue-500 w-16 h-16" /> },
-  { name: "GitHub", icon: <FaGithub className="text-black w-16 h-16" /> },
-  { name: "Git Alternative", icon: <FaGitAlt className="text-black w-16 h-16" /> },
-];
+const skills = {
+  programmingLanguages: ["C", "Java", "Javascript", "Typescript", "Python"],
+  librariesFrameworks: [
+    "Numpy",
+    "Pandas",
+    "Matplotlib",
+    "Seaborn",
+    "Open CV",
+    "Scikitlearn",
+    "Tensorflow",
+    "Django",
+    "Flask",
+    "Tailwind CSS",
+    "Node JS",
+    "Express JS",
+    "React JS",
+    "Next JS",
+    "Expo",
+    "React Native",
+  ],
+  tools: ["VS Code", "Jupyter Notebook", "Github", "Android Studio"],
+  databases: ["SQL", "PostgreSQL", "MongoDB"],
+  others: [
+    "HTML",
+    "CSS",
+    "DSA",
+    "Web Development",
+    "App Development",
+    "Machine Learning",
+    "Object Detection",
+  ],
+};
 
 const themeClasses = {
   light: "bg-gradient-to-r from-white via-blue-100 to-white text-black",
@@ -39,19 +45,35 @@ const themeClasses = {
   hacker: "bg-gradient-to-r from-green-500 via-green-300 to-green-500 text-white",
 };
 
-const TensorFlowIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-    {/* TensorFlow SVG path data */}
-    <path d="M5 3h14v4H5zm0 6h14v4H5zm0 6h14v4H5z" />
-  </svg>
-);
-
 interface SkillsProps {
   theme: keyof typeof themeClasses; // Theme type based on the keys of the `themeClasses` object
 }
 
 const Skills: React.FC<SkillsProps> = ({ theme }) => {
   const themeClass = themeClasses[theme];
+  
+  // Initialize the collapsed state for each category
+  const [collapsed, setCollapsed] = useState<{
+    programmingLanguages: boolean;
+    librariesFrameworks: boolean;
+    tools: boolean;
+    databases: boolean;
+    others: boolean;
+  }>({
+    programmingLanguages: false,
+    librariesFrameworks: false,
+    tools: false,
+    databases: false,
+    others: false,
+  });
+
+  // Toggle collapse/expand state for each section
+  const toggleSection = (section: keyof typeof collapsed) => {
+    setCollapsed((prevState) => ({
+      ...prevState,
+      [section]: !prevState[section],
+    }));
+  };
 
   return (
     <section className={`${themeClass} py-24`}>
@@ -61,16 +83,117 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
           title="My Skills"
           desc="Technologies I have worked with, showcasing my technical abilities and expertise."
         />
-        
-        <div className="flex flex-wrap justify-center gap-8">
-          {skills.map((skill, index) => (
-            <SkillCard 
-              key={index} 
-              name={skill.name} 
-              icon={skill.icon} 
-            />
-          ))}
 
+        <div className="flex flex-wrap justify-center gap-8">
+          {/* Render Programming Languages */}
+          <div className="w-full mb-8">
+            <h2
+              className="text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center"
+              onClick={() => toggleSection("programmingLanguages")}
+            >
+              <span>Programming Languages</span>
+              {collapsed.programmingLanguages ? (
+                <FaChevronDown className="ml-2" />
+              ) : (
+                <FaChevronUp className="ml-2" />
+              )}
+            </h2>
+            {!collapsed.programmingLanguages && (
+              <div className="flex flex-wrap justify-center gap-8">
+                {skills.programmingLanguages.map((skill, index) => (
+                  <SkillCard key={index} name={skill} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Render Libraries/Frameworks */}
+          <div className="w-full mb-8">
+            <h2
+              className="text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center"
+              onClick={() => toggleSection("librariesFrameworks")}
+            >
+              <span>Libraries & Frameworks</span>
+              {collapsed.librariesFrameworks ? (
+                <FaChevronDown className="ml-2" />
+              ) : (
+                <FaChevronUp className="ml-2" />
+              )}
+            </h2>
+            {!collapsed.librariesFrameworks && (
+              <div className="flex flex-wrap justify-center gap-8">
+                {skills.librariesFrameworks.map((skill, index) => (
+                  <SkillCard key={index} name={skill} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Render Tools */}
+          <div className="w-full mb-8">
+            <h2
+              className="text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center"
+              onClick={() => toggleSection("tools")}
+            >
+              <span>Tools</span>
+              {collapsed.tools ? (
+                <FaChevronDown className="ml-2" />
+              ) : (
+                <FaChevronUp className="ml-2" />
+              )}
+            </h2>
+            {!collapsed.tools && (
+              <div className="flex flex-wrap justify-center gap-8">
+                {skills.tools.map((skill, index) => (
+                  <SkillCard key={index} name={skill} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Render Databases */}
+          <div className="w-full mb-8">
+            <h2
+              className="text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center"
+              onClick={() => toggleSection("databases")}
+            >
+              <span>Databases</span>
+              {collapsed.databases ? (
+                <FaChevronDown className="ml-2" />
+              ) : (
+                <FaChevronUp className="ml-2" />
+              )}
+            </h2>
+            {!collapsed.databases && (
+              <div className="flex flex-wrap justify-center gap-8">
+                {skills.databases.map((skill, index) => (
+                  <SkillCard key={index} name={skill} />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {/* Render Others */}
+          <div className="w-full mb-8">
+            <h2
+              className="text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center"
+              onClick={() => toggleSection("others")}
+            >
+              <span>Others</span>
+              {collapsed.others ? (
+                <FaChevronDown className="ml-2" />
+              ) : (
+                <FaChevronUp className="ml-2" />
+              )}
+            </h2>
+            {!collapsed.others && (
+              <div className="flex flex-wrap justify-center gap-8">
+                {skills.others.map((skill, index) => (
+                  <SkillCard key={index} name={skill} />
+                ))}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </section>

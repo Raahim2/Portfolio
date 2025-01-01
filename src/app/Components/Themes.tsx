@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect } from "react";
 import Info from "./Info";
 import ThemeCard from "./ThemeCard";
 

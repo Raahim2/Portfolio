@@ -106,7 +106,7 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
               <h2 className="title-font font-medium text-3xl text-gray-900">
               <NumberTicker value={s3} />+
               </h2>
-              <p className="leading-relaxed">Known Frameworks</p>
+              <p className="leading-relaxed">Frameworks</p>
             </div>
           </div>
           <div className="p-4 md:w-1/4 sm:w-1/2 w-full">
@@ -125,7 +125,7 @@ const Stats: React.FC<StatsProps> = ({ theme, s1, s2, s3, s4 }) => {
               <h2 className="title-font font-medium text-3xl text-gray-900">
                 <NumberTicker value={s4} />+
               </h2>
-              <p className="leading-relaxed">Hackerthons Experience</p>
+              <p className="leading-relaxed">Hackerthons</p>
             </div>
           </div>
         </div>

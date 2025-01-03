@@ -10,8 +10,8 @@ const projects = [
   },
   {
     title: "Expense Manager",
-    description: "An Android application that helps users track their expenses efficiently, providing visual insights into spending habits through various charts.",
-    techStack: ['Java', 'Android SDK', 'AnyChart', 'SQLite', 'XML'],
+    description: "An Android application that helps users track their expenses efficiently, providing visual insights into spending habits through various charts like Pie Scatter etc. ",
+    techStack: ['Java', 'Android SDK', 'AnyChart', 'SQLite', 'XML' , 'Android Studio'],
     link: "https://github.com/Raahim2/ExpenseManager",
     githubLink: "https://github.com/Raahim2/ExpenseManager",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -38,7 +38,7 @@ const projects = [
   {
     title: "Pyplot",
     description: "A Django web application that simplifies data visualization, allowing users to create various graphs without any coding.",
-    techStack: ['Django', 'Python', 'Matplotlib', 'JavaScript', 'HTML', 'CSS'],
+    techStack: ['Django', 'Python', 'Matplotlib', 'JavaScript', 'HTML', 'CSS' , 'Django - Admin'],
     link: "https://github.com/Raahim2/Pyplot",
     githubLink: "https://github.com/Raahim2/Pyplot",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
@@ -59,6 +59,7 @@ import React from 'react';
 import ProjectCard from './ProjectCard';
 import Info from './Info';
 import Slide from './SlideAnimation';
+import Link from 'next/link';
 import { RainbowButton } from '@/components/ui/rainbow-button';
 
 interface ProjectPageProps {
@@ -70,24 +71,43 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
   
 
   const themeClasses = {
-    light: "bg-gradient-to-r from-white via-blue-100 to-white text-black",
-    dark: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
-    fire: "bg-gradient-to-r from-white via-orange-300 to-white text-black",
-    luxury: "bg-gradient-to-r from-white via-yellow-200 to-white text-black",
-    lightning: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 text-white", // distinct blue theme
-    hacker: "bg-gradient-to-r from-green-500 via-green-300 to-green-500 text-white", // distinct green theme
+    light: {
+      bg: "from-white to-white",
+      color:"black",
+    },
+    dark: {
+      bg: "from-gray-800 via-gray-900 to-black",
+      color:"white",
+    },
+    fire: {
+      bg: "from-white via-orange-100 to-white",
+      color:"black",
+    },
+    luxury: {
+      bg: "from-white via-yellow-100 to-white",
+      color:"black",
+    },
+    lightning: {
+      bg: "from-white via-blue-100 to-white",
+      color:"black",
+    },
+    hacker: {
+      bg: "from-green-700 via-green-900 to-green-900 ",
+      color:"white",
+    },
   };
 
   return (
-    <div className={`p-8 ${themeClasses[theme]} flex flex-col items-center`}>
+    <div className={`bg-gradient-to-r p-8 ${themeClasses[theme].bg} flex flex-col items-center`} id='Projects'>
       <Info 
+        theme={theme}
         name='Explore Projects' 
         title='Showcase of My Work' 
         desc='Live Demo/Code for the projects I have made'
       />
       
       {/* Adjusted grid for responsive layout */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mx-auto w-3/4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mx-auto sm:w-3/4 md:w-3/4 lg:w-3/4 w-full ">
         {projects.map((project, index) => (
           <Slide key={index}>
             <ProjectCard
@@ -104,7 +124,12 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
       </div>
       
       <div className="flex justify-center mt-8">
-        <RainbowButton className="text-center">View All Projects</RainbowButton>
+        <RainbowButton className="text-center">
+          <Link href="/projects">
+          View All Projects
+          </Link>
+          </RainbowButton>
+
       </div>
     </div>
   );

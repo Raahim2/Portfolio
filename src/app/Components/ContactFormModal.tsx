@@ -1,25 +1,16 @@
-import React, { useState } from "react";
+"use client";
+
+import React from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope } from "react-icons/fa";
 
-const ContactFormModal: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+interface ContactFormModalProps {
+  isOpen: boolean;
+  toggleModal: () => void;
+}
 
-  const toggleModal = () => setIsOpen(!isOpen);
-
+const ContactFormModal: React.FC<ContactFormModalProps> = ({ isOpen, toggleModal }) => {
   return (
     <>
-      {/* Trigger Button */}
-      <motion.button
-        onClick={toggleModal}
-        className="fixed bottom-6 right-6 bg-primary-700 text-black rounded-full w-14 h-14 shadow-lg flex items-center justify-center transition-transform transform hover:scale-110"
-        aria-label="Contact Us"
-        whileHover={{ rotate: 15, scale: 1.1 }} // Adding a hover animation
-        whileTap={{ scale: 0.95 }} // Tap feedback
-      >
-        <FaEnvelope size={24} /> {/* Interactive envelope icon */}
-      </motion.button>
-
       {/* Modal Backdrop */}
       {isOpen && (
         <div

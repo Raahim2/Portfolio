@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <div className="w-full h-screen">
       <div>
-        <Navbar theme={theme}/>
+        <Navbar theme={theme}setTheme={setTheme}/>
         <Header theme={theme}/>
         <Themes theme={theme} setTheme={setTheme}/>
         <Education theme={theme}/>

@@ -1,40 +1,49 @@
-"use client";
-
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
+import ContactFormModal from './ContactFormModal';
 
-// Define the NavbarProps interface to specify the theme type
+// Define the NavbarProps interface to specify the theme type and setTheme function
 interface NavbarProps {
   theme: 'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker';
+  setTheme: React.Dispatch<React.SetStateAction<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>>; // setTheme function
 }
 
-const Navbar: React.FC<NavbarProps> = ({ theme }) => {
+const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
   const [isOpen, setIsOpen] = useState(false); // State to toggle the mobile menu
+  const [isModalOpen, setIsModalOpen] = useState(false); // State to control the modal visibility
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen); 
 
   const themeClasses = {
     light: {
-      bg: "bg-gradient-to-r from-white via-blue-100 to-white",
-      txt: "text-blue-500 text-xl",
+      bg: "from-white  to-white",
+      heading: "text-black text-xl",
+      text: "text-black"
     },
     dark: {
-      bg: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
-      txt: "text-purple-500 text-xl",
+      bg: "from-gray-800 via-gray-900 to-black text-white",
+      heading: "text-purple-500 text-xl",
+      text: "text-white"
     },
     fire: {
-      bg: "bg-gradient-to-r from-white via-orange-300 to-white",
-      txt: "text-orange-500 text-xl",
+      bg: "from-white via-orange-100 to-white",
+      heading: "text-orange-500 text-xl",
+      text: "text-black"
     },
     luxury: {
-      bg: "bg-gradient-to-r from-white to-yellow-200",
-      txt: "text-yellow-500 text-xl",
+      bg: "from-white via-yellow-100 to-white",
+      heading: "text-yellow-500 text-xl",
+      text: "text-black"
     },
     lightning: {
-      bg: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500",
-      txt: "text-white text-xl",
+      bg: "from-white via-blue-100 to-white",
+      heading: "text-blue-500 text-xl",
+      text: "text-black"
     },
     hacker: {
-      bg: "bg-gradient-to-r from-green-500 via-green-300 to-green-500",
-      txt: "text-white text-xl",
+      bg: "from-green-700 via-green-900 to-green-900 text-white",
+      heading: "text-green-500 text-xl",
+      text: "text-white"
     },
   };
 
@@ -43,58 +52,80 @@ const Navbar: React.FC<NavbarProps> = ({ theme }) => {
     setIsOpen(!isOpen);
   };
 
+  // Handle theme change and update via setTheme
+  const handleThemeChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    setTheme(event.target.value as 'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker');
+  };
+
   return (
-    <header className={`shadow-md sticky top-0 z-50 ${themeClasses[theme].bg}`}>
+    <header className={`bg-gradient-to-r shadow-md sticky top-0 z-50 ${themeClasses[theme].bg}`}>
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
-          <p className={`${themeClasses[theme].txt} font-extrabold`}>Raahim&apos;s Portfolio</p>
+          <p className={`${themeClasses[theme].heading} font-extrabold`}>Raahim&apos;s Portfolio</p>
         </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex space-x-6">
-          <Link href="#features" className="hover:text-blue-600">
+          <Link href="#Education" className="hover:text-blue-600">
             Education
           </Link>
-          <Link href="#pricing" className="hover:text-blue-600">
+          <Link href="#Projects" className="hover:text-blue-600">
             Projects
           </Link>
-          <Link href="#about" className="hover:text-blue-600">
+          <Link href="#Skills" className="hover:text-blue-600">
             Skills
           </Link>
-          <Link href="#contact" className="hover:text-blue-600">
+          <button className="hover:text-blue-600" onClick={toggleModal}>
             Contact
-          </Link>
+          </button>
         </nav>
+
+        {/* Theme Dropdown */}
+        <div className="md:flex items-center space-x-4">
+          <select
+            value={theme}
+            onChange={handleThemeChange}
+            className={`bg-transparent border border-gray-300  px-4 py-2 rounded-md ${themeClasses[theme].text} `}
+          >
+            <option value="light" className='text-black'>Light</option>
+            <option value="dark" className='text-black'>Dark</option>
+            <option value="fire" className='text-black'>Fire</option>
+            <option value="luxury" className='text-black'>Luxury</option>
+            <option value="lightning" className='text-black'>Lightning</option>
+            <option value="hacker" className='text-black'>Hacker</option>
+          </select>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
           className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none"
           onClick={toggleMenu}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
+         Contact
         </button>
       </div>
 
       {/* Mobile Menu - Toggle visibility based on 'isOpen' state */}
       {isOpen && (
         <div className="md:hidden flex flex-col items-center space-y-4 py-4">
-          <Link href="#features" className="hover:text-blue-600">
+          <Link href="#Education" className="hover:text-blue-600">
             Education
           </Link>
-          <Link href="#pricing" className="hover:text-blue-600">
+          <Link href="#Projects" className="hover:text-blue-600">
             Projects
           </Link>
-          <Link href="#about" className="hover:text-blue-600">
+          <Link href="#Skills" className="hover:text-blue-600">
             Skills
           </Link>
-          <Link href="#contact" className="hover:text-blue-600">
+          <p className="hover:text-blue-600" onClick={toggleModal}>
             Contact
-          </Link>
+          </p>
         </div>
       )}
+
+      {/* Render the Contact Form Modal if open */}
+      {isModalOpen && <ContactFormModal isOpen={isModalOpen} toggleModal={toggleModal} />}
     </header>
   );
 };

@@ -37,12 +37,30 @@ const skills = {
 };
 
 const themeClasses = {
-  light: "bg-gradient-to-r from-white via-blue-100 to-white text-black",
-  dark: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
-  fire: "bg-gradient-to-r from-white via-orange-300 to-white text-black",
-  luxury: "bg-gradient-to-r from-white via-yellow-200 to-white text-black",
-  lightning: "bg-gradient-to-r from-blue-500 via-blue-300 to-blue-500 text-white",
-  hacker: "bg-gradient-to-r from-green-500 via-green-300 to-green-500 text-white",
+  light: {
+    bg: "from-white to-white",
+    color:"black",
+  },
+  dark: {
+    bg: "from-gray-800 via-gray-900 to-black",
+    color:"white",
+  },
+  fire: {
+    bg: "from-white via-orange-100 to-white",
+    color:"black",
+  },
+  luxury: {
+    bg: "from-white via-yellow-100 to-white",
+    color:"black",
+  },
+  lightning: {
+    bg: "from-white via-blue-100 to-white",
+    color:"black",
+  },
+  hacker: {
+    bg: "from-green-700 via-green-900 to-green-900 ",
+    color:"white",
+  },
 };
 
 interface SkillsProps {
@@ -50,7 +68,6 @@ interface SkillsProps {
 }
 
 const Skills: React.FC<SkillsProps> = ({ theme }) => {
-  const themeClass = themeClasses[theme];
   
   // Initialize the collapsed state for each category
   const [collapsed, setCollapsed] = useState<{
@@ -75,7 +92,7 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
   const renderSection = (title: string, skillsList: string[], sectionKey: string) => (
     <div className="w-full mb-8">
       <h2
-        className="text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center"
+        className={`text-2xl font-semibold mb-4 cursor-pointer flex items-center justify-center text-${themeClasses[theme].color}`}
         onClick={() => toggleSection(sectionKey)}
       >
         <span>{title}</span>
@@ -87,16 +104,14 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
       </h2>
       {!collapsed[sectionKey] && (
         <div className="flex flex-wrap justify-center gap-8">
-          {skillsList.map((skill, index) => (
-           <>
-           <div className="flex flex-col items-center">
-             <SkillCard key={index} name={skill} />
-             <p className="mt-2 text-sm font-medium dark:text-white text-black sm:text-xs md:text-sm lg:text-base xl:text-base">
-               {skill}
-             </p>
-           </div>
-         </>
-          ))}
+        {skillsList.map((skill, index) => (
+          <div className="flex flex-col items-center">
+            <SkillCard key={index} name={skill} />
+            <p className={`mt-2 text-sm font-medium sm:text-xs md:text-sm lg:text-base xl:text-base text-${themeClasses[theme].color}`}>
+              {skill}
+            </p>
+          </div>
+      ))}
         </div>
         
         
@@ -106,9 +121,10 @@ const Skills: React.FC<SkillsProps> = ({ theme }) => {
   );
 
   return (
-    <section className={`${themeClass} py-24`}>
+    <section className={`bg-gradient-to-r  ${themeClasses[theme].bg} py-24`} id="Skills">
       <div className="container px-6 mx-auto text-center">
         <Info
+          theme={theme}
           name="Skills"
           title="My Skills"
           desc="Technologies I have worked with, showcasing my technical abilities and expertise."

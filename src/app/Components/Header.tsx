@@ -3,6 +3,7 @@ import { RainbowButton } from "@/components/ui/rainbow-button";
 import WordRotate from "@/components/ui/word-rotate";
 import BoxReveal from "@/components/ui/box-reveal";
 import { Cloud } from "./Cloud";
+import Link from "next/link";
 
 interface HeaderProps {
   theme: "light" | "dark" | "fire" | "luxury" | "lightning" | "hacker";
@@ -13,28 +14,28 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
 
   const themeClasses = {
     light: {
-      bg: "bg-gradient-to-r from-white via-blue-100 to-white",
-      txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#1E3A8A] via-[#3B82F6] to-[#60A5FA] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
+      bg: "bg-gradient-to-r from-white to-white",
+      txt: "from-[#1a1a1a] via-[#4d4d4d] to-[#1a1a1a]",
     },
     dark: {
       bg: "bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white",
-      txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#6B21A8] via-[#9333EA] to-[#D946EF] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
+      txt: "from-[#6B21A8] via-[#9333EA] to-[#D946EF]",
     },
     fire: {
-      bg: "bg-gradient-to-r from-white via-orange-200 to-white",
-      txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#ffd319] via-[#ff2975] to-[#8c1eff] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
+      bg: "bg-gradient-to-r from-white via-orange-100 to-white",
+      txt: "from-[#ffd319] via-[#ff2975] to-[#8c1eff]",
     },
     luxury: {
-      bg: "bg-gradient-to-r from-white via-yellow-200 to-white",
-      txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#FFD700] via-[#FFAC33] to-[#FF6347] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
+      bg: "bg-gradient-to-r from-white via-yellow-100 to-white",
+      txt: "from-[#FFD700] via-[#FFAC33] to-[#FF6347] ",
     },
     lightning: {
-      bg: "bg-gradient-to-r from-blue-500 via-blue-200 to-blue-500",
-      txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#1E3A8A] via-[#3B82F6] to-[#60A5FA] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
+      bg: "bg-gradient-to-r from-white via-blue-100 to-white",
+      txt: "from-[#1E3A8A] via-[#3B82F6] to-[#60A5FA] ",
     },
     hacker: {
-      bg: "bg-gradient-to-r from-green-500 via-green-200 to-green-500",
-      txt: "pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-b from-[#22C55E] via-[#10B981] to-[#4ADE80] bg-clip-text font-bold leading-none tracking-tighter text-transparent",
+      bg: "bg-gradient-to-r from-green-700 via-green-900 to-green-900 text-white",
+      txt: "from-[#22C55E] via-[#10B981] to-[#4ADE80] ",
     },
   };
 
@@ -50,21 +51,24 @@ const Header: React.FC<HeaderProps> = ({ theme }) => {
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
 
                 <WordRotate
-                className={`${themeClasses[theme].txt} max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white`}
+                className={`${themeClasses[theme].txt} bg-clip-text bg-gradient-to-b pointer-events-none z-10 whitespace-pre-wrap text-transparent max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white`}
                 words={words}
               />
                 </BoxReveal>
 
 
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
-                <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">From checkout to global sales tax compliance, companies around the world use Flowbite to simplify their payment stack.</p>
+                <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">Check Out My Portfolio !</p>
                 </BoxReveal>
 
                 <BoxReveal boxColor={"#5046e6"} duration={0.5}>
 
                 <RainbowButton>
+                    <Link href="/RAAHIM.pdf">
                     <code>npm i -D Resume@latest</code>
+                    </Link>
                 </RainbowButton>
+
                 </BoxReveal>
 
             </div>

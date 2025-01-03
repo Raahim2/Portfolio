@@ -3,9 +3,10 @@ const projects = [
     title: "GenTube",
     description: "A cross-platform Android/iOS application built with React Native, enabling users to generate AI-powered videos effortlessly using advanced machine learning models.",
     techStack: ['React Native', 'Flask', 'JavaScript', 'Python', 'MoviePy', 'Expo', 'MongoDB', 'Vercel', 'FFmpeg'],
-    link: "https://github.com/Raahim2/Predictive-AI",
-    githubLink: "https://github.com/Raahim2/Predictive-AI",
+    link: "https://github.com/Raahim2/GenTube/raw/refs/heads/main/Builds/GenTube.apk",
+    githubLink: "https://github.com/Raahim2/GenTube/",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
     timePeriod: "Sem III",
     type: "app"
   },
@@ -13,9 +14,10 @@ const projects = [
     title: "MechaAI",
     description: "MECHA AI is a versatile image and file editing platform built with Flask, React, Vite, Taiwind. It combines tools for transforming  images and seamless file management, providing a user-friendly experience.",
     techStack: ['Flask', 'React', 'Vite', 'Tailwind CSS', 'Machine Learning' , "Open CV" , "YOLO" , "Pandas" , "Numpy" ],
-    link: "https://github.com/Raahim2/ImageAI",
-    githubLink: "https://github.com/Raahim2/ImageAI",
-    videoSrc: "",
+    link: "https://github.com/Raahim2/MechaAI",
+    githubLink: "https://github.com/Raahim2/MechaAI",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887048/PROJECTS-DEMO/asdmbxnggtdckzprn8lo.mp4",
+    thumbnailURL:"https://cdn.vectorstock.com/i/500p/83/43/abstract-ai-circuit-board-background-technology-vector-51538343.jpg",
     timePeriod: "Sem III",
     type: "web"
   },
@@ -23,9 +25,10 @@ const projects = [
     title: "BrightHome",
     description: "BrightHome is a highly functional e-commerce platform designed for Bright Home Furniture. It offers a seamless shopping experience, allowing users to purchase high-quality furniture products",
     techStack: ['Django', 'HTML', 'CSS', 'JavaScript' , "PostgreSQL" , "Python" , "Vercel"],
-    link: "https://github.com/Raahim2/BrightHome",
+    link: "https://brighthome.vercel.app",
     githubLink: "https://github.com/Raahim2/BrightHome",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887158/PROJECTS-DEMO/g4vctcdgfrwtbar3jokc.mp4",
+    thumbnailURL:"https://t3.ftcdn.net/jpg/05/93/29/50/360_F_593295067_2SvEv1yO5R5JZPtnE4AHAun5js3MrTnp.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -33,9 +36,10 @@ const projects = [
     title: "Smart Attendance System",
     description: "A web-based attendance management system that utilizes Face Recognition and Object Detection to mark attendance & uses advanced AI technologies to ensure a seamless and secure attendance process.",
     techStack: ['Flask', 'Face Recognition', 'HTML' , 'Tailwind CSS' , 'Python' , 'Object Detection' , 'YOLO' , 'JSON'],
-    link: "https://github.com/Raahim2/SmartAttendance",
-    githubLink: "https://github.com/Raahim2/SmartAttendance",
-    videoSrc: "",
+    link: "https://github.com/Raahim2/Smart-Attendance-System",
+    githubLink: "https://github.com/Raahim2/Smart-Attendance-System",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887208/PROJECTS-DEMO/jrjqwy7osdd6vixnk4le.mp4",
+    thumbnailURL:"https://thumbs.dreamstime.com/b/woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -43,9 +47,10 @@ const projects = [
     title: "Pics AI",
     description: "Pics AI is a React Native mobile app designed to enhance and stylize images using advanced AI-powered machine learning models. The platform allows users to interact with an integrated chatbot",
     techStack: ['React Native', 'Cloudinary', 'Flask', 'ChatBot' , 'Gemini' , 'Javascript' ],
-    link: "https://github.com/Raahim2/PicsAI",
-    githubLink: "https://github.com/Raahim2/PicsAI",
+    link: "https://expo.dev/accounts/raahim2/projects/PicsAI/builds/46c9d25b-74c8-4851-a38c-82b4e2114428",
+    githubLink: "https://github.com/Raahim2/Pics-AI",
     videoSrc: "",
+    thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXuKGkKjk5iOALbdyZiHxs_tWTvIg4qr0v1A&s",
     timePeriod: "Sem III",
     type: "app"
   },
@@ -53,12 +58,13 @@ const projects = [
     title: "FortyFy Web",
     description: "FortyFy Web is a Vulnerability Assessment and Penetration Testing (VAPT) tool developed during the Synergy Hackathon. The tool is designed to help security professionals identify vulnerabilities websites",
     techStack: ['Python', 'Django', 'Python-Nmap', 'Scrapy' , 'Beautiful Soup' , 'Tailwind CSS'],
-    link: "https://github.com/Raahim2/SynergyMatrixOut",
-    githubLink: "https://github.com/Raahim2/SynergyMatrixOut",
-    videoSrc: "",
+    link: "https://synergy-matrix-out.vercel.app",
+    githubLink: "https://github.com/Raahim2/Synergy_MatrixOut",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887232/PROJECTS-DEMO/hbxk928a0n6jpflt9zkd.mp4",
+    thumbnailURL:"https://cdn.vectorstock.com/i/500p/73/71/laptop-with-shield-cyber-security-concept-3d-vector-38107371.jpg",
     timePeriod: "Sem II",
     type: "web"
-  }
+  },
 ];
 
 // components/ProjectPage.tsx
@@ -126,6 +132,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
               videoSrc={project.videoSrc}
               timePeriod={project.timePeriod}
               projectType={project.type}
+              thumbnailURL={project.thumbnailURL}
             />
           </Slide>
         ))}

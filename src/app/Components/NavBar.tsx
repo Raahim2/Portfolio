@@ -18,32 +18,32 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
     light: {
       bg: "from-white  to-white",
       heading: "text-black text-xl",
-      text: "text-black"
+      text: "black"
     },
     dark: {
       bg: "from-gray-800 via-gray-900 to-black text-white",
       heading: "text-purple-500 text-xl",
-      text: "text-white"
+      text: "white"
     },
     fire: {
       bg: "from-white via-orange-100 to-white",
       heading: "text-orange-500 text-xl",
-      text: "text-black"
+      text: "black"
     },
     luxury: {
       bg: "from-white via-yellow-100 to-white",
       heading: "text-yellow-500 text-xl",
-      text: "text-black"
+      text: "black"
     },
     lightning: {
       bg: "from-white via-blue-100 to-white",
       heading: "text-blue-500 text-xl",
-      text: "text-black"
+      text: "black"
     },
     hacker: {
       bg: "from-green-700 via-green-900 to-green-900 text-white",
       heading: "text-green-500 text-xl",
-      text: "text-white"
+      text: "white"
     },
   };
 
@@ -70,7 +70,7 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
           <Link href="#Education" className="hover:text-blue-600">
             Education
           </Link>
-          <Link href="#Projects" className="hover:text-blue-600">
+          <Link href="/projects" className="hover:text-blue-600">
             Projects
           </Link>
           <Link href="#Skills" className="hover:text-blue-600">
@@ -102,7 +102,12 @@ const Navbar: React.FC<NavbarProps> = ({ theme, setTheme }) => {
           className="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none"
           onClick={toggleMenu}
         >
-         Contact
+         <svg width="30" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
+        <rect width="30" height="4" rx="2" fill={`${themeClasses[theme].text}`}/>
+        <rect y="12" width="30" height="4" rx="2" fill={`${themeClasses[theme].text}`}/>
+        <rect y="24" width="30" height="4" rx="2" fill={`${themeClasses[theme].text}`}/>
+      </svg>
+
         </button>
       </div>
 

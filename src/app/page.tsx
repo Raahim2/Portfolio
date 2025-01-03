@@ -8,12 +8,18 @@ import ProjectPage from "./Components/ProjectPage";
 import Education from "./Components/Education";
 import Skills from "./Components/Skills";
 import Footer from "./Components/Footer";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 
 export default function Home() {
+  const availableThemes: ('light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker')[] = ['light', 'dark', 'fire', 'luxury', 'lightning', 'hacker'];
   const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('light');
+
+  useEffect(() => {
+    const randomTheme = availableThemes[Math.floor(Math.random() * availableThemes.length)];
+    setTheme(randomTheme);
+  }, []); 
 
   return (
     <div className="w-full h-screen">

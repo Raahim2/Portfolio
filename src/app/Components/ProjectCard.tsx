@@ -12,6 +12,7 @@ interface ProjectCardProps {
   videoSrc: string;
   timePeriod: string;
   projectType: string; // New prop for project type
+  thumbnailURL:string
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({
@@ -23,6 +24,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   videoSrc,
   timePeriod,
   projectType,
+  thumbnailURL
 }) => {
   return (
     <CardContainer className="w-[100%]">
@@ -34,8 +36,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               className="dark:hidden"
               animationStyle="from-center"
               videoSrc={videoSrc}
-              thumbnailSrc="https://www.vdocipher.com/blog/wp-content/uploads/2023/12/DALL%C2%B7E-2023-12-10-20.21.58-A-creative-and-visually-appealing-featured-image-for-a-blog-about-video-thumbnails-for-various-social-platforms-like-YouTube-Instagram-and-TikTok-s-1024x585.png"
+              thumbnailSrc={thumbnailURL}
               thumbnailAlt="Hero Video"
+              
             />
           </div>
 

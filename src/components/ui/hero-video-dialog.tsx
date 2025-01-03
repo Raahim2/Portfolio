@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Play, XIcon } from "lucide-react";
@@ -98,10 +96,8 @@ export default function HeroVideoDialog({
         <img
           src={thumbnailSrc}
           alt={thumbnailAlt}
-          width={1920}
-          height={1080}
+          className="max-h-36 w-full h-auto rounded-md border shadow-lg transition-all duration-200 ease-out group-hover:brightness-75 object-cover"
           loading="lazy"
-          className="w-full rounded-md border shadow-lg transition-all duration-200 ease-out group-hover:brightness-75"
         />
         <div className="absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-105">
           <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">

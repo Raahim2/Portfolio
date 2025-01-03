@@ -8,6 +8,7 @@ const projects = [
     link: "https://github.com/Raahim2/GenTube/raw/refs/heads/main/Builds/GenTube.apk",
     githubLink: "https://github.com/Raahim2/GenTube/",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
     timePeriod: "Sem III",
     type: "app"
   },
@@ -17,7 +18,8 @@ const projects = [
     techStack: ['Flask', 'React', 'Vite', 'Tailwind CSS', 'Machine Learning' , "Open CV" , "YOLO" , "Pandas" , "Numpy" ],
     link: "https://github.com/Raahim2/MechaAI",
     githubLink: "https://github.com/Raahim2/MechaAI",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887048/PROJECTS-DEMO/asdmbxnggtdckzprn8lo.mp4",
+    thumbnailURL:"https://cdn.vectorstock.com/i/500p/83/43/abstract-ai-circuit-board-background-technology-vector-51538343.jpg",
     timePeriod: "Sem III",
     type: "web"
   },
@@ -27,7 +29,8 @@ const projects = [
     techStack: ['Django', 'HTML', 'CSS', 'JavaScript' , "PostgreSQL" , "Python" , "Vercel"],
     link: "https://brighthome.vercel.app",
     githubLink: "https://github.com/Raahim2/BrightHome",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887158/PROJECTS-DEMO/g4vctcdgfrwtbar3jokc.mp4",
+    thumbnailURL:"https://t3.ftcdn.net/jpg/05/93/29/50/360_F_593295067_2SvEv1yO5R5JZPtnE4AHAun5js3MrTnp.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -37,7 +40,8 @@ const projects = [
     techStack: ['Flask', 'Face Recognition', 'HTML' , 'Tailwind CSS' , 'Python' , 'Object Detection' , 'YOLO' , 'JSON'],
     link: "https://github.com/Raahim2/Smart-Attendance-System",
     githubLink: "https://github.com/Raahim2/Smart-Attendance-System",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887208/PROJECTS-DEMO/jrjqwy7osdd6vixnk4le.mp4",
+    thumbnailURL:"https://thumbs.dreamstime.com/b/woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -48,6 +52,7 @@ const projects = [
     link: "https://expo.dev/accounts/raahim2/projects/PicsAI/builds/46c9d25b-74c8-4851-a38c-82b4e2114428",
     githubLink: "https://github.com/Raahim2/Pics-AI",
     videoSrc: "",
+    thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXuKGkKjk5iOALbdyZiHxs_tWTvIg4qr0v1A&s",
     timePeriod: "Sem III",
     type: "app"
   },
@@ -57,7 +62,8 @@ const projects = [
     techStack: ['Python', 'Django', 'Python-Nmap', 'Scrapy' , 'Beautiful Soup' , 'Tailwind CSS'],
     link: "https://synergy-matrix-out.vercel.app",
     githubLink: "https://github.com/Raahim2/Synergy_MatrixOut",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887232/PROJECTS-DEMO/hbxk928a0n6jpflt9zkd.mp4",
+    thumbnailURL:"https://cdn.vectorstock.com/i/500p/73/71/laptop-with-shield-cyber-security-concept-3d-vector-38107371.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -68,6 +74,7 @@ const projects = [
     link: "/",
     githubLink: "https://github.com/Raahim2/Portfolio",
     videoSrc: "",
+    thumbnailURL:"https://static.vecteezy.com/system/resources/previews/011/067/273/non_2x/portfolio-button-portfolio-speech-bubble-portfolio-colorful-web-banner-illustration-vector.jpg",
     timePeriod: "Sem III",
     type: "web"
   },
@@ -78,6 +85,7 @@ const projects = [
     link: "https://github.com/Raahim2/Vault-7",
     githubLink: "https://github.com/Raahim2/Vault-7",
     videoSrc: "",
+    thumbnailURL:"https://e1.pxfuel.com/desktop-wallpaper/370/938/desktop-wallpaper-hacker-codes-hacker-code-thumbnail.jpg",
     timePeriod: "Sem IV",
     type: "app"
   },
@@ -87,7 +95,8 @@ const projects = [
     techStack: ['Flask', 'Python', 'PDF Management', 'File System', 'Database Integration'],
     link: "https://github.com/Raahim2/File-Manager",
     githubLink: "https://github.com/Raahim2/File-Manager",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887394/PROJECTS-DEMO/qwcsui81axnhlekylufb.mp4",
+    thumbnailURL:"https://t3.ftcdn.net/jpg/01/05/85/14/360_F_105851441_gDJSXUgfH54DwX5rfH6Qiq4sHIZ9ogYL.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -97,7 +106,8 @@ const projects = [
     techStack: ['Streamlit', 'Python', 'Hugging Face', 'Transformers', 'Machine Learning', 'NLP'],
     link: "https://taskfusion.streamlit.app/",
     githubLink: "https://github.com/Raahim2/Artificial-intelligence",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887417/PROJECTS-DEMO/jm7chc0bixec93rf8mcl.mp4",
+    thumbnailURL:"https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvbTM3M2JhdGNoNS0wMDQuanBn.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -108,6 +118,7 @@ const projects = [
     link: "https://github.com/Raahim2/StatsTube/blob/main/app-debug.apk",
     githubLink: "https://github.com/Raahim2/StatsTube",
     videoSrc: "",
+    thumbnailURL:"https://www.vdocipher.com/blog/wp-content/uploads/2023/12/DALL%C2%B7E-2023-12-10-20.21.58-A-creative-and-visually-appealing-featured-image-for-a-blog-about-video-thumbnails-for-various-social-platforms-like-YouTube-Instagram-and-TikTok-s-1024x585.png",
     timePeriod: "Sem II",
     type: "app"
   },
@@ -118,6 +129,7 @@ const projects = [
     link: "https://github.com/Raahim2/ExpenseManager/blob/main/ExpenseManager.apk",
     githubLink: "https://github.com/Raahim2/ExpenseManager",
     videoSrc: "",
+    thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLK2rtTvnqP7vPtytvhrkqi-OutVImVHcUOw&s",
     timePeriod: "Sem II",
     type: "app"
   },
@@ -127,7 +139,8 @@ const projects = [
     techStack: ['Express.js', 'Flask', 'Machine Learning', 'Web Development', 'API Integration'],
     link: "https://github.com/Raahim2/ML2WEB",
     githubLink: "https://github.com/Raahim2/ML2WEB",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887576/PROJECTS-DEMO/xpwlw3nsjw2xc8oi5fq8.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/machine-learning-banner-artificial-intelligence_107791-611.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -137,7 +150,8 @@ const projects = [
     techStack: ['Django', 'Python', 'Text Utilities', 'Web Development', 'HTML', 'CSS'],
     link: "https://text-utils-beta-olive.vercel.app/",
     githubLink: "https://github.com/Raahim2/Django-TextUtils",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887588/PROJECTS-DEMO/ddoczq4kkjcprtgup3pw.mp4",
+    thumbnailURL:"https://mrwallpaper.com/images/hd/juventus-text-background-uh38ekj01hl473jj.jpg",
     timePeriod: "Sem I",
     type: "web"
   },
@@ -147,7 +161,8 @@ const projects = [
     techStack: ['Flask', 'YOLO', 'Python', 'Object Detection', 'Machine Learning', 'TensorFlow'],
     link: "https://github.com/Raahim2/YOLO-Object-Detection",
     githubLink: "https://github.com/Raahim2/YOLO-Object-Detection",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887612/PROJECTS-DEMO/qtfsccbdzoiwhnezsaak.mp4",
+    thumbnailURL:"https://www.shutterstock.com/image-vector/city-street-crossing-through-eyes-260nw-1377458216.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -157,7 +172,8 @@ const projects = [
     techStack: ['Django', 'AI', 'Healthcare', 'Machine Learning', 'Python', 'PostgreSQL'],
     link: "https://github.com/Raahim2/Hackoona-Mattata",
     githubLink: "https://github.com/Raahim2/Hackoona-Mattata",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887635/PROJECTS-DEMO/gxasxymvmup4lzgif8wx.mp4",
+    thumbnailURL:"https://img.freepik.com/premium-photo/health-care-science-icon-pattern-medical-innovation-concept-background_845786-2255.jpg?semt=ais_hybrid",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -167,7 +183,8 @@ const projects = [
     techStack: ['Django', 'XGBoost', 'Python', 'Machine Learning', 'Data Science', 'AI Models'],
     link: "https://predictive-ai.vercel.app",
     githubLink: "https://github.com/Raahim2/Predictive-AI",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887730/PROJECTS-DEMO/utadqg214tvxr4vftfuq.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -177,10 +194,189 @@ const projects = [
     techStack: ['Django', 'Matplotlib', 'Python', 'Data Visualization', 'Web Development', 'Charts'],
     link: "https://django-pyplot.vercel.app",
     githubLink: "https://github.com/Raahim2/Django-Pyplot",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887739/PROJECTS-DEMO/phh8a389j8hqafgyyhqc.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
     timePeriod: "Sem I",
     type: "web"
+  },
+  {
+    title: "Counter Tally Counter App",
+    description: "A simple tally counter app built using Android Studio. First Project of Android",
+    techStack: ['Java', 'Android Studio' , 'XML'],
+    link: "https://github.com/Raahim2/APK-Android/blob/main/Counter/counter.apk",
+    githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Counter",
+    videoSrc: "",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "app"
+  },
+  {
+    title: "Password Generator",
+    description: "A password generator app for creating secure passwords.",
+    techStack: ['Java', 'Android Studio' , 'XML'],
+    link: "https://github.com/Raahim2/APK-Android/blob/main/Password%20Generater/Password.apk",
+    githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Password%20Generater",
+    videoSrc: "",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "app"
+  },
+  {
+    title: "PyQuiz",
+    description: "A quiz app built with Python, designed to test knowledge on various topics.",
+    techStack: ['Python' , 'Java' , 'Android Studio' , 'XML'],
+    link: "https://github.com/Raahim2/APK-Android/blob/main/PyQuiz/app-debug.apk",
+    githubLink: "https://github.com/Raahim2/APK-Android/tree/main/PyQuiz",
+    videoSrc: "",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM II",
+    type: "app"
+  },
+  {
+    title: "Timer App",
+    description: "A simple timer app built with Android Studio. Having Feartures of StopWatch",
+    techStack: ['Java', 'Android Studio'],
+    link: "https://github.com/Raahim2/APK-Android/blob/main/Timer/Timer.apk",
+    githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Timer",
+    videoSrc: "",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "app"
+  },
+  {
+    title: "Calculator Web App",
+    description: "A simple calculator app built using HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Calculator/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Calculator",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "12th",
+    type: "web"
+  },
+  {
+    title: "Clash Royale Chest Simulator",
+    description: "A chest simulator inspired by the Clash Royale game. that stores data in localstorage",
+    techStack: ['HTML', 'CSS', 'JavaScript' ],
+    link: "https://raahim2.github.io/WebDev.github.io/Clash%20Royale/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Clash%20Royale",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "Clock Web App",
+    description: "A simple clock app built with HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Clock/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Clock",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "CloneStar Bootstrap UI",
+    description: "A simple UI clone of Star website using Bootstrap. For CSS practice",
+    techStack: ['HTML', 'CSS', 'Bootstrap'],
+    link: "https://raahim2.github.io/WebDev.github.io/Clonestarp/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Clonestarp",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "12th",
+    type: "web"
+  },
+  {
+    title: "Guess What Game",
+    description: "A guessing game built using HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Guss%20what/pract.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Guss%20what",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "KBC UI",
+    description: "A simple UI for the KBC game with some logic implemented.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/KBC/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/KBC",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "Landing Page",
+    description: "A brand landing page built with HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Landing%20page/BrandX.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Landing%20page",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "12th",
+    type: "web"
+  },
+  {
+    title: "Miner Game",
+    description: "A simple miner game built with HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Miner/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Miner",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "Old Portfolio",
+    description: "An old portfolio built with HTML and CSS. This is the Updated One",
+    techStack: ['HTML', 'CSS'],
+    link: "https://raahim2.github.io/WebDev.github.io/Portfolio/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Portfolio",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "Quote Generator",
+    description: "A simple quote generator app built with HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Quote/FCC-1%20quote.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Quote",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "Temperature Converter",
+    description: "A temperature converter app built with HTML, CSS, and JavaScript.",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/Temperature%20Converter/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Temperature%20Converter",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
+  },
+  {
+    title: "Game Zone",
+    description: "A Game Zone Web built with HTML, CSS, and JavaScript Having gamke like Tic Tac Toe , Snake Game  , Flappy Bird , Rock Paper Sissor",
+    techStack: ['HTML', 'CSS', 'JavaScript'],
+    link: "https://raahim2.github.io/WebDev.github.io/tic%20tac%20toe/index.html",
+    githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/tic%20tac%20toe",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4",
+    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    timePeriod: "SEM I",
+    type: "web"
   }
+  // https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4- mini proj
+  // https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4- gamezone
 ];
 
 
@@ -242,6 +438,7 @@ export default function Home() {
                 videoSrc={project.videoSrc}
                 timePeriod={project.timePeriod}
                 projectType={project.type}
+                thumbnailURL={project.thumbnailURL}
               />
             </Slide>
           ))}

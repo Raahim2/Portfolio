@@ -1,59 +1,66 @@
 const projects = [
   {
-    title: "Predictive AI",
-    description: "A comprehensive platform showcasing various predictive AI models, including handwritten digit classification, plant disease detection, and house price prediction.",
-    techStack: ['HTML', 'CSS', 'JavaScript', 'Python', 'Django', 'TensorFlow', 'Keras', 'NumPy', 'Pandas'],
+    title: "GenTube",
+    description: "A cross-platform Android/iOS application built with React Native, enabling users to generate AI-powered videos effortlessly using advanced machine learning models.",
+    techStack: ['React Native', 'Flask', 'JavaScript', 'Python', 'MoviePy', 'Expo', 'MongoDB', 'Vercel', 'FFmpeg'],
     link: "https://github.com/Raahim2/Predictive-AI",
     githubLink: "https://github.com/Raahim2/Predictive-AI",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    timePeriod: "Mar 2024 - Apr 2024"
+    timePeriod: "Sem III",
+    type: "app"
   },
   {
-    title: "Expense Manager",
-    description: "An Android application that helps users track their expenses efficiently, providing visual insights into spending habits through various charts like Pie Scatter etc. ",
-    techStack: ['Java', 'Android SDK', 'AnyChart', 'SQLite', 'XML' , 'Android Studio'],
-    link: "https://github.com/Raahim2/ExpenseManager",
-    githubLink: "https://github.com/Raahim2/ExpenseManager",
-    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    timePeriod: "Feb 2024 - Mar 2024"
+    title: "MechaAI",
+    description: "MECHA AI is a versatile image and file editing platform built with Flask, React, Vite, Taiwind. It combines tools for transforming  images and seamless file management, providing a user-friendly experience.",
+    techStack: ['Flask', 'React', 'Vite', 'Tailwind CSS', 'Machine Learning' , "Open CV" , "YOLO" , "Pandas" , "Numpy" ],
+    link: "https://github.com/Raahim2/ImageAI",
+    githubLink: "https://github.com/Raahim2/ImageAI",
+    videoSrc: "",
+    timePeriod: "Sem III",
+    type: "web"
   },
   {
-    title: "My Care AI",
-    description: "An innovative AI-driven platform designed to streamline healthcare management for individuals, offering personalized recommendations and symptom analysis.",
-    techStack: ['Python', 'Django', 'Machine Learning', 'TensorFlow', 'Keras', 'NumPy', 'Pandas', 'HTML', 'CSS'],
-    link: "https://github.com/Raahim2/Hackoona-Mattata",
-    githubLink: "https://github.com/Raahim2/Hackoona-Mattata",
-    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    timePeriod: "Jan 2024 - Feb 2024"
+    title: "BrightHome",
+    description: "BrightHome is a highly functional e-commerce platform designed for Bright Home Furniture. It offers a seamless shopping experience, allowing users to purchase high-quality furniture products",
+    techStack: ['Django', 'HTML', 'CSS', 'JavaScript' , "PostgreSQL" , "Python" , "Vercel"],
+    link: "https://github.com/Raahim2/BrightHome",
+    githubLink: "https://github.com/Raahim2/BrightHome",
+    videoSrc: "",
+    timePeriod: "Sem II",
+    type: "web"
   },
   {
-    title: "Bright Home Furniture",
-    description: "An e-commerce platform powered by Django, offering a seamless shopping experience for high-quality furniture products.",
-    techStack: ['Django', 'Python', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'SQLite'],
-    link: "https://github.com/Raahim2/Bright-Home-Furniture",
-    githubLink: "https://github.com/Raahim2/Bright-Home-Furniture",
-    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    timePeriod: "Dec 2023 - Jan 2024"
+    title: "Smart Attendance System",
+    description: "A web-based attendance management system that utilizes Face Recognition and Object Detection to mark attendance & uses advanced AI technologies to ensure a seamless and secure attendance process.",
+    techStack: ['Flask', 'Face Recognition', 'HTML' , 'Tailwind CSS' , 'Python' , 'Object Detection' , 'YOLO' , 'JSON'],
+    link: "https://github.com/Raahim2/SmartAttendance",
+    githubLink: "https://github.com/Raahim2/SmartAttendance",
+    videoSrc: "",
+    timePeriod: "Sem II",
+    type: "web"
   },
   {
-    title: "Pyplot",
-    description: "A Django web application that simplifies data visualization, allowing users to create various graphs without any coding.",
-    techStack: ['Django', 'Python', 'Matplotlib', 'JavaScript', 'HTML', 'CSS' , 'Django - Admin'],
-    link: "https://github.com/Raahim2/Pyplot",
-    githubLink: "https://github.com/Raahim2/Pyplot",
-    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    timePeriod: "Nov 2023 - Dec 2023"
+    title: "Pics AI",
+    description: "Pics AI is a React Native mobile app designed to enhance and stylize images using advanced AI-powered machine learning models. The platform allows users to interact with an integrated chatbot",
+    techStack: ['React Native', 'Cloudinary', 'Flask', 'ChatBot' , 'Gemini' , 'Javascript' ],
+    link: "https://github.com/Raahim2/PicsAI",
+    githubLink: "https://github.com/Raahim2/PicsAI",
+    videoSrc: "",
+    timePeriod: "Sem III",
+    type: "app"
   },
   {
-    title: "Plant Disease Classification",
-    description: "A deep learning model developed using TensorFlow CNN to identify diseases in plants based on images, facilitating early detection and intervention in agriculture.",
-    techStack: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'NumPy', 'Pandas'],
-    link: "https://github.com/Raahim2/Plant-Disease-Classification",
-    githubLink: "https://github.com/Raahim2/Plant-Disease-Classification",
-    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    timePeriod: "Oct 2023 - Nov 2023"
+    title: "FortyFy Web",
+    description: "FortyFy Web is a Vulnerability Assessment and Penetration Testing (VAPT) tool developed during the Synergy Hackathon. The tool is designed to help security professionals identify vulnerabilities websites",
+    techStack: ['Python', 'Django', 'Python-Nmap', 'Scrapy' , 'Beautiful Soup' , 'Tailwind CSS'],
+    link: "https://github.com/Raahim2/SynergyMatrixOut",
+    githubLink: "https://github.com/Raahim2/SynergyMatrixOut",
+    videoSrc: "",
+    timePeriod: "Sem II",
+    type: "web"
   }
 ];
+
 // components/ProjectPage.tsx
 import React from 'react';
 import ProjectCard from './ProjectCard';
@@ -118,6 +125,7 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ theme }) => {
               githubLink={project.githubLink}
               videoSrc={project.videoSrc}
               timePeriod={project.timePeriod}
+              projectType={project.type}
             />
           </Slide>
         ))}

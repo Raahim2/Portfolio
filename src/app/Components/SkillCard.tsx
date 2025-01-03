@@ -39,7 +39,7 @@ export const SkillCard = ({
   }
 
   return (
-  <div className="flex flex-col items-center p-4 relative rounded-lg shadow-md  w-30 h-30 sm:w-40 md:w-44 lg:w-48 xl:w-48 sm:h-40 md:h-44 lg:h-48 xl:h-48">
+  <div className="flex flex-col items-center p-2  relative rounded-lg shadow-md  w-15 h-15 sm:w-40 md:w-44 lg:w-48 xl:w-48 sm:h-40 md:h-44 lg:h-48 xl:h-48">
     <Icon className="absolute h-3 w-3 -top-2 -left-2 dark:text-white text-black sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-4 lg:w-4 xl:h-4 xl:w-4" />
     <Icon className="absolute h-3 w-3 -bottom-2 -left-2 dark:text-white text-black sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-4 lg:w-4 xl:h-4 xl:w-4" />
     <Icon className="absolute h-3 w-3 -top-2 -right-2 dark:text-white text-black sm:h-3 sm:w-3 md:h-4 md:w-4 lg:h-4 lg:w-4 xl:h-4 xl:w-4" />

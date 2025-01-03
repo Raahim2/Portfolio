@@ -106,7 +106,7 @@ const Education: React.FC<EducationProps> = ({ theme }) => {
               {education.description}
             </p>
             <a
-              href="https://www.djsce.ac.in/"
+              href={education.web}
               className={`bg-gradient-to-r inline-flex items-center px-5 py-2 text-sm font-medium text-white ${themeClasses[theme].heading} rounded-lg `}
             >
               <svg

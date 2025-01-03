@@ -6,7 +6,7 @@ const projects = [
     link: "https://github.com/Raahim2/GenTube/raw/refs/heads/main/Builds/GenTube.apk",
     githubLink: "https://github.com/Raahim2/GenTube/",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://static.vecteezy.com/system/resources/thumbnails/035/158/342/small_2x/loop-background-neon-retro-wave-80s-style-video.jpg",
     timePeriod: "Sem III",
     type: "app"
   },

@@ -13,13 +13,8 @@ import { cn } from "@/lib/utils";
 import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
 
 export default function Home() {
-  const availableThemes: ('light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker')[] = ['light', 'dark', 'fire', 'luxury', 'lightning', 'hacker'];
-  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('light');
+  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('lightning');
 
-  useEffect(() => {
-    const randomTheme = availableThemes[Math.floor(Math.random() * availableThemes.length)];
-    setTheme(randomTheme);
-  }, []); 
 
   return (
     <div className="w-full h-screen">

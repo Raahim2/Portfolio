@@ -8,7 +8,7 @@ const projects = [
     link: "https://github.com/Raahim2/GenTube/raw/refs/heads/main/Builds/GenTube.apk",
     githubLink: "https://github.com/Raahim2/GenTube/",
     videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://static.vecteezy.com/system/resources/thumbnails/035/158/342/small_2x/loop-background-neon-retro-wave-80s-style-video.jpg",
     timePeriod: "Sem III",
     type: "app"
   },
@@ -184,7 +184,7 @@ const projects = [
     link: "https://predictive-ai.vercel.app",
     githubLink: "https://github.com/Raahim2/Predictive-AI",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887730/PROJECTS-DEMO/utadqg214tvxr4vftfuq.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://cdn.impossibleimages.ai/wp-content/uploads/2023/04/25130515/background-image-generators.jpg",
     timePeriod: "Sem II",
     type: "web"
   },
@@ -195,7 +195,7 @@ const projects = [
     link: "https://django-pyplot.vercel.app",
     githubLink: "https://github.com/Raahim2/Django-Pyplot",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887739/PROJECTS-DEMO/phh8a389j8hqafgyyhqc.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://images.unsplash.com/photo-1666875753105-c63a6f3bdc86?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZGF0YSUyMGFuYWx5c2lzfGVufDB8fDB8fHww",
     timePeriod: "Sem I",
     type: "web"
   },
@@ -206,7 +206,7 @@ const projects = [
     link: "https://github.com/Raahim2/APK-Android/blob/main/Counter/counter.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Counter",
     videoSrc: "",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://static.vecteezy.com/system/resources/thumbnails/016/462/942/small_2x/zero-to-nine-cyan-digital-electronic-clock-numbers-set-lcd-led-digit-set-for-the-counter-clock-calculator-mockup-in-flat-style-design-isolated-on-black-background-vector.jpg",
     timePeriod: "SEM I",
     type: "app"
   },
@@ -217,7 +217,7 @@ const projects = [
     link: "https://github.com/Raahim2/APK-Android/blob/main/Password%20Generater/Password.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Password%20Generater",
     videoSrc: "",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://png.pngtree.com/thumb_back/fh260/background/20230620/pngtree-secure-your-personal-data-with-3d-lock-and-password-field-a-image_3650162.jpg",
     timePeriod: "SEM I",
     type: "app"
   },
@@ -228,7 +228,7 @@ const projects = [
     link: "https://github.com/Raahim2/APK-Android/blob/main/PyQuiz/app-debug.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/PyQuiz",
     videoSrc: "",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://i.pinimg.com/736x/d6/70/99/d670990fa86f31233a53a22d7bb2f4bc.jpg",
     timePeriod: "SEM II",
     type: "app"
   },
@@ -239,7 +239,7 @@ const projects = [
     link: "https://github.com/Raahim2/APK-Android/blob/main/Timer/Timer.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Timer",
     videoSrc: "",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://media.istockphoto.com/id/1124901295/vector/abstract-futuristic-technology-background-with-digital-number-timer-concept-and-countdown.jpg?s=612x612&w=0&k=20&c=K7RIRAu0TRqIz7ejYnCTbjFBONeBSxUX5e5SyW3Do4U=",
     timePeriod: "SEM I",
     type: "app"
   },
@@ -250,7 +250,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Calculator/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Calculator",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://t3.ftcdn.net/jpg/05/07/66/60/360_F_507666066_J8zsoPcCnW0uGcEYzoT0RElpHACKxd6e.jpg",
     timePeriod: "12th",
     type: "web"
   },
@@ -261,7 +261,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Clash%20Royale/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Clash%20Royale",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjVtIRjYk5oq54DRoL7cI6ee51gqZ0q74elg&s",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -272,7 +272,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Clock/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Clock",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://img.pikbest.com/wp/202345/clock-wallpaper-wall-art-with-golden-design_9612196.jpg!sw800",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -283,7 +283,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Clonestarp/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Clonestarp",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://img.freepik.com/premium-photo/bootstrap-5-blue-background-3d-render_582637-307.jpg",
     timePeriod: "12th",
     type: "web"
   },
@@ -294,7 +294,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Guss%20what/pract.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Guss%20what",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://motionarray.imgix.net/1967640-oH6JklTSez-high_0005.jpg?w=660&q=60&fit=max&auto=format",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -305,7 +305,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/KBC/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/KBC",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScQKTguS2pNHecODVM6pr5VQniqyBaHGi7dQ&s",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -316,7 +316,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Landing%20page/BrandX.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Landing%20page",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://img.freepik.com/free-vector/overlapping-forms-wallpaper_23-2148652537.jpg",
     timePeriod: "12th",
     type: "web"
   },
@@ -327,7 +327,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Miner/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Miner",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://media.istockphoto.com/id/1449010610/vector/mine-tunnel-inside-view-cave-with-railway-rocks.jpg?s=612x612&w=0&k=20&c=nxDqDH9Uuhzjgr5F6TPU6Qm4BA0gB0nX8RCwr9c4XbM=",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -338,7 +338,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Portfolio/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Portfolio",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://img.freepik.com/free-vector/gradient-geometric-design-dark-background_23-2148425667.jpg?semt=ais_hybrid",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -349,7 +349,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Quote/FCC-1%20quote.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Quote",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://piktochart.com/wp-content/uploads/2023/05/large-157.jpg",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -360,7 +360,7 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/Temperature%20Converter/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/Temperature%20Converter",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://media.istockphoto.com/id/1306625811/vector/climat-change-and-control-sun-and-snowflake.jpg?s=612x612&w=0&k=20&c=FuWSd7UflzY8K46Rzdhao7lEW7fLq5XSqh3AHsRHhVw=",
     timePeriod: "SEM I",
     type: "web"
   },
@@ -371,24 +371,23 @@ const projects = [
     link: "https://raahim2.github.io/WebDev.github.io/tic%20tac%20toe/index.html",
     githubLink: "https://github.com/Raahim2/WebDev.github.io/tree/main/tic%20tac%20toe",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4",
-    thumbnailURL:"https://img.freepik.com/free-vector/banner-video-editing-software_107791-2923.jpg",
+    thumbnailURL:"https://t4.ftcdn.net/jpg/07/11/21/69/360_F_711216985_K3x4ApoF6ACsJJe5IdPpH4rvD7KjJAfl.jpg",
     timePeriod: "SEM I",
     type: "web"
   }
-  // https://res.cloudinary.com/defyovyob/video/upload/v1735887756/PROJECTS-DEMO/j7cmmhtsrbhdwbwe3p7t.mp4- mini proj
-  // https://res.cloudinary.com/defyovyob/video/upload/v1735887755/PROJECTS-DEMO/pu37ytlydxweqyn9mzez.mp4- gamezone
 ];
-
 
 import Navbar from "../Components/NavBar";
 import React, { useState } from 'react';
 import ProjectCard from "../Components/ProjectCard";
 import Slide from '../Components/SlideAnimation';
 
-
 export default function Home() {
-
   const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('light');
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filterType, setFilterType] = useState("all");
+  const [filterSemester, setFilterSemester] = useState("all");
+  const [filterTech, setFilterTech] = useState("all");
 
   const themeClasses = {
     light: {
@@ -417,41 +416,51 @@ export default function Home() {
     },
   };
 
+  const filteredProjects = projects.filter(project => {
+    const matchesSearch = project.title.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesSearch ;
+  });
+
+  
+
   return (
     <div className="w-full h-screen">
-        <Navbar theme={theme} setTheme={setTheme}/>
+      <Navbar theme={theme} setTheme={setTheme} />
 
-        <div>
+      <div>
         <div className={`bg-gradient-to-r p-8 ${themeClasses[theme].bg} flex flex-col items-center`} id='Projects'>
-        
-        
-        {/* Adjusted grid for responsive layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mx-auto sm:w-3/4 md:w-3/4 lg:w-3/4 w-full ">
-          {projects.map((project, index) => (
-            <Slide key={index}>
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                techStack={project.techStack}
-                link={project.link}
-                githubLink={project.githubLink}
-                videoSrc={project.videoSrc}
-                timePeriod={project.timePeriod}
-                projectType={project.type}
-                thumbnailURL={project.thumbnailURL}
-              />
-            </Slide>
-          ))}
+
+          <div className="flex flex-col items-center mb-8 w-3/4 ">
+            <input
+              type="text"
+              placeholder="Search projects..."
+              className="p-2 border rounded mb-4 w-full"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+
+
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mx-auto sm:w-3/4 md:w-3/4 lg:w-3/4 w-full ">
+            {filteredProjects.map((project, index) => (
+              <Slide key={index}>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  techStack={project.techStack}
+                  link={project.link}
+                  githubLink={project.githubLink}
+                  videoSrc={project.videoSrc}
+                  timePeriod={project.timePeriod}
+                  projectType={project.type}
+                  thumbnailURL={project.thumbnailURL}
+                />
+              </Slide>
+            ))}
+          </div>
         </div>
-        
-       
       </div>
-        </div>
     </div>
   );
 }
-
-
-
-  
-  

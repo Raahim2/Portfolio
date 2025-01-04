@@ -55,16 +55,16 @@ const projects = [
     type: "app"
   },
   {
-    title: "FortyFy Web",
-    description: "FortyFy Web is a Vulnerability Assessment and Penetration Testing (VAPT) tool developed during the Synergy Hackathon. The tool is designed to help security professionals identify vulnerabilities websites",
-    techStack: ['Python', 'Django', 'Python-Nmap', 'Scrapy' , 'Beautiful Soup' , 'Tailwind CSS'],
-    link: "https://synergy-matrix-out.vercel.app",
-    githubLink: "https://github.com/Raahim2/Synergy_MatrixOut",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887232/PROJECTS-DEMO/hbxk928a0n6jpflt9zkd.mp4",
-    thumbnailURL:"https://cdn.vectorstock.com/i/500p/73/71/laptop-with-shield-cyber-security-concept-3d-vector-38107371.jpg",
+    title: "File Manager",
+    description: "A file management system developed with Flask and Python, designed to manage, organize, and process PDF files with features such as viewing, editing, and organizing.",
+    techStack: ['Flask', 'Python', 'PDF Management', 'File System', 'Database Integration'],
+    link: "https://file-manager-virid.vercel.app/",
+    githubLink: "https://github.com/Raahim2/File-Manager",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887394/PROJECTS-DEMO/qwcsui81axnhlekylufb.mp4",
+    thumbnailURL:"https://t3.ftcdn.net/jpg/01/05/85/14/360_F_105851441_gDJSXUgfH54DwX5rfH6Qiq4sHIZ9ogYL.jpg",
     timePeriod: "Sem II",
     type: "web"
-  },
+  }
 ];
 
 // components/ProjectPage.tsx

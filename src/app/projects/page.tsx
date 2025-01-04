@@ -38,7 +38,7 @@ const projects = [
     title: "Smart Attendance System",
     description: "A web-based attendance management system that utilizes Face Recognition and Object Detection to mark attendance & uses advanced AI technologies to ensure a seamless and secure attendance process.",
     techStack: ['Flask', 'Face Recognition', 'HTML' , 'Tailwind CSS' , 'Python' , 'Object Detection' , 'YOLO' , 'JSON'],
-    link: "https://github.com/Raahim2/Smart-Attendance-System",
+    link: "https://smart-attendance-system-ten.vercel.app/",
     githubLink: "https://github.com/Raahim2/Smart-Attendance-System",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887208/PROJECTS-DEMO/jrjqwy7osdd6vixnk4le.mp4",
     thumbnailURL:"https://thumbs.dreamstime.com/b/woman-hand-writing-attendance-marker-blue-background-professionally-79573891.jpg",
@@ -55,6 +55,17 @@ const projects = [
     thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXuKGkKjk5iOALbdyZiHxs_tWTvIg4qr0v1A&s",
     timePeriod: "Sem III",
     type: "app"
+  },
+  {
+    title: "File Manager",
+    description: "A file management system developed with Flask and Python, designed to manage, organize, and process PDF files with features such as viewing, editing, and organizing.",
+    techStack: ['Flask', 'Python', 'PDF Management', 'File System', 'Database Integration'],
+    link: "https://file-manager-virid.vercel.app/",
+    githubLink: "https://github.com/Raahim2/File-Manager",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887394/PROJECTS-DEMO/qwcsui81axnhlekylufb.mp4",
+    thumbnailURL:"https://t3.ftcdn.net/jpg/01/05/85/14/360_F_105851441_gDJSXUgfH54DwX5rfH6Qiq4sHIZ9ogYL.jpg",
+    timePeriod: "Sem II",
+    type: "web"
   },
   {
     title: "FortyFy Web",
@@ -88,17 +99,6 @@ const projects = [
     thumbnailURL:"https://e1.pxfuel.com/desktop-wallpaper/370/938/desktop-wallpaper-hacker-codes-hacker-code-thumbnail.jpg",
     timePeriod: "Sem IV",
     type: "app"
-  },
-  {
-    title: "File Manager",
-    description: "A file management system developed with Flask and Python, designed to manage, organize, and process PDF files with features such as viewing, editing, and organizing.",
-    techStack: ['Flask', 'Python', 'PDF Management', 'File System', 'Database Integration'],
-    link: "https://github.com/Raahim2/File-Manager",
-    githubLink: "https://github.com/Raahim2/File-Manager",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887394/PROJECTS-DEMO/qwcsui81axnhlekylufb.mp4",
-    thumbnailURL:"https://t3.ftcdn.net/jpg/01/05/85/14/360_F_105851441_gDJSXUgfH54DwX5rfH6Qiq4sHIZ9ogYL.jpg",
-    timePeriod: "Sem II",
-    type: "web"
   },
   {
     title: "TaskFusion",
@@ -159,7 +159,7 @@ const projects = [
     title: "YOLO-Object-Detection",
     description: "A Flask web app that integrates YOLO (You Only Look Once) object detection model for real-time object recognition and classification, deployed via Flask API.",
     techStack: ['Flask', 'YOLO', 'Python', 'Object Detection', 'Machine Learning', 'TensorFlow'],
-    link: "https://github.com/Raahim2/YOLO-Object-Detection",
+    link: "https://yolo-object-detection-gamma.vercel.app/",
     githubLink: "https://github.com/Raahim2/YOLO-Object-Detection",
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887612/PROJECTS-DEMO/qtfsccbdzoiwhnezsaak.mp4",
     thumbnailURL:"https://www.shutterstock.com/image-vector/city-street-crossing-through-eyes-260nw-1377458216.jpg",

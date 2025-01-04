@@ -7,7 +7,7 @@ const projects = [
     techStack: ['React Native', 'Flask', 'JavaScript', 'Python', 'MoviePy', 'Expo', 'MongoDB', 'Vercel', 'FFmpeg'],
     link: "https://github.com/Raahim2/GenTube/raw/refs/heads/main/Builds/GenTube.apk",
     githubLink: "https://github.com/Raahim2/GenTube/",
-    videoSrc: "https://www.w3schools.com/html/mov_bbb.mp4",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735992544/PROJECTS-DEMO/ul6kdvylvlvywdwjd5ad.mp4",
     thumbnailURL:"https://static.vecteezy.com/system/resources/thumbnails/035/158/342/small_2x/loop-background-neon-retro-wave-80s-style-video.jpg",
     timePeriod: "Sem III",
     type: "app"
@@ -82,7 +82,7 @@ const projects = [
     title: "Vault-7",
     description: "An Android malware scanner app built with Jetpack Compose and Kotlin, using advanced threat detection algorithms to identify and eliminate malicious files with real-time scanning.",
     techStack: ['Kotlin', 'Jetpack Compose', 'Android SDK', 'Malware Detection', 'Real-time Sync'],
-    link: "https://github.com/Raahim2/Vault-7",
+    link: "https://vault-webapp-two.vercel.app/",
     githubLink: "https://github.com/Raahim2/Vault-7",
     videoSrc: "",
     thumbnailURL:"https://e1.pxfuel.com/desktop-wallpaper/370/938/desktop-wallpaper-hacker-codes-hacker-code-thumbnail.jpg",
@@ -117,7 +117,7 @@ const projects = [
     techStack: ['Java', 'Android Studio', 'YouTube API', 'Android SDK', 'Real-time Data'],
     link: "https://github.com/Raahim2/StatsTube/blob/main/app-debug.apk",
     githubLink: "https://github.com/Raahim2/StatsTube",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916227/PROJECTS-DEMO/fzpepxtaqxzkfrkas595.mp4",
     thumbnailURL:"https://www.vdocipher.com/blog/wp-content/uploads/2023/12/DALL%C2%B7E-2023-12-10-20.21.58-A-creative-and-visually-appealing-featured-image-for-a-blog-about-video-thumbnails-for-various-social-platforms-like-YouTube-Instagram-and-TikTok-s-1024x585.png",
     timePeriod: "Sem II",
     type: "app"
@@ -128,7 +128,7 @@ const projects = [
     techStack: ['Java', 'Android Studio', 'SQLite', 'YouTube API', 'Expense Tracking'],
     link: "https://github.com/Raahim2/ExpenseManager/blob/main/ExpenseManager.apk",
     githubLink: "https://github.com/Raahim2/ExpenseManager",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916135/PROJECTS-DEMO/abhgwumhcqpepnlqhb7w.mp4",
     thumbnailURL:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLK2rtTvnqP7vPtytvhrkqi-OutVImVHcUOw&s",
     timePeriod: "Sem II",
     type: "app"
@@ -216,7 +216,7 @@ const projects = [
     techStack: ['Java', 'Android Studio' , 'XML'],
     link: "https://github.com/Raahim2/APK-Android/blob/main/Password%20Generater/Password.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Password%20Generater",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916089/PROJECTS-DEMO/pufrfzn6klnm0q13yrtn.mp4",
     thumbnailURL:"https://png.pngtree.com/thumb_back/fh260/background/20230620/pngtree-secure-your-personal-data-with-3d-lock-and-password-field-a-image_3650162.jpg",
     timePeriod: "SEM I",
     type: "app"
@@ -227,7 +227,7 @@ const projects = [
     techStack: ['Python' , 'Java' , 'Android Studio' , 'XML'],
     link: "https://github.com/Raahim2/APK-Android/blob/main/PyQuiz/app-debug.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/PyQuiz",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916107/PROJECTS-DEMO/bdwzktfxifnaiu47pgew.mp4",
     thumbnailURL:"https://i.pinimg.com/736x/d6/70/99/d670990fa86f31233a53a22d7bb2f4bc.jpg",
     timePeriod: "SEM II",
     type: "app"
@@ -238,7 +238,7 @@ const projects = [
     techStack: ['Java', 'Android Studio'],
     link: "https://github.com/Raahim2/APK-Android/blob/main/Timer/Timer.apk",
     githubLink: "https://github.com/Raahim2/APK-Android/tree/main/Timer",
-    videoSrc: "",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916118/PROJECTS-DEMO/jc9s3bquscuvk8gsic2r.mp4",
     thumbnailURL:"https://media.istockphoto.com/id/1124901295/vector/abstract-futuristic-technology-background-with-digital-number-timer-concept-and-countdown.jpg?s=612x612&w=0&k=20&c=K7RIRAu0TRqIz7ejYnCTbjFBONeBSxUX5e5SyW3Do4U=",
     timePeriod: "SEM I",
     type: "app"

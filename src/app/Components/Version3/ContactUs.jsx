@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 // Assuming Cloud is a standard component. If it's also a motion component, this will still work.
 import { Cloud } from '../Version2/Cloud';
 
-// --- Reusable Arrow Icon (Unchanged) ---
+// --- Reusable Arrow Icon ---
 const ArrowIcon = (props) => (
   <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path d="M1 6H11M11 6L6 1M11 6L6 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -71,7 +71,9 @@ const textItemVariant = {
 
 const ContactUs = () => {
   return (
-    <section className="w-full py-16 md:py-24">
+    // FIX 1: Added `relative overflow-x-hidden` to the root section.
+    // This is the main fix that prevents the horizontal scrollbar during animations.
+    <section className="w-full py-16 md:py-24 relative overflow-x-hidden">
       <motion.div
         className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border rounded-xl border-gray-800"
         initial="hidden"
@@ -85,7 +87,7 @@ const ContactUs = () => {
 
           {/* Animated Image Column */}
           <motion.div 
-            className="flex justify-center lg:justify-start lg:order-last filter invert ml-20"
+            className="flex justify-center lg:justify-start lg:order-last filter invert"
             variants={cloudColumnVariant}
           >
             <Cloud/>

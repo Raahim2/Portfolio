@@ -81,9 +81,8 @@ const logoItemVariant = {
 
 const Experience = () => {
   return (
-    // THE FIX IS HERE: Added `overflow-x-hidden` to the main container
     <div className="text-white pb-10 relative overflow-x-hidden" id="experience" >
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10" >
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10 py-10" >
         
         <Starter title={"Experience"} text1={"Hands-on roles "} text2={"that built real skills."}  />
 
@@ -116,8 +115,15 @@ const Experience = () => {
             
             {/* Left Column: Animated Graphic */}
             <motion.div variants={leftColumnVariant}>
+              {/*
+                FIX: Replaced the problematic classes with a responsive approach.
+                1. `object-contain`: This is the key fix. It ensures the ENTIRE image is displayed without being cropped.
+                2. `max-h-[350px]`: On mobile (the default), this caps the image height, so it looks good on small screens.
+                3. `lg:min-h-[500px]`: On large screens, this restores the original minimum height, bringing back the desktop layout you liked.
+                4. `hover:scale-105`: Slightly reduced the hover scale for a more subtle effect.
+              */}
               <img 
-                className="transition-transform duration-300 ease-in-out hover:scale-110 lg:block h-full min-h-[500px] w-full bg-no-repeat bg-center"
+                className="w-full max-h-[350px] lg:min-h-[500px] object-contain transition-transform duration-300 ease-in-out hover:scale-105"
                 src="/Images/VJTI.png" 
                 alt="VJTI Campus"
               />

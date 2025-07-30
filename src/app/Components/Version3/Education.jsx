@@ -26,9 +26,8 @@ const cardData = [
 const Education = () => {
   return (
     // Section container with a dark background and vertical padding
-    <section className=" text-white w-full pt-20 lg:py-24" id='education'>
+    <section className=" text-white w-full pt-20 " id='education'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
 
         {/* Starter component for the title and description */}
         <Starter 

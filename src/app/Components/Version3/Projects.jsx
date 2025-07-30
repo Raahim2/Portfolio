@@ -162,18 +162,15 @@ const itemVariants = {
 const Projects = () => {
   return (
     <div className="text-white pb-10 relative" id="projects">
-      <div className="max-w-7xl mx-auto px-20 lg:px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         
         <Starter title={"Projects"} text1={"Built for real users."} text2={"Shipped with purpose."} />
 
-        {/* **THE FIX IS HERE** */}
         <motion.div
           className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
           variants={containerVariants}
           initial="hidden"
-          // Animate when the element is in view
           whileInView="visible"
-          // Configure viewport settings for the trigger
           viewport={{ 
             once: true, // Animate only once
             amount: 0.1 // Trigger when 10% of the element is visible

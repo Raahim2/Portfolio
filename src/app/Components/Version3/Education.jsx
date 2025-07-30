@@ -9,17 +9,17 @@ const cardData = [
   {
     number: '001',
     title: 'Bombay Cambridge School',
-    imageUrl: '/images/BCG.png', 
+    imageUrl: '/Images/BCG.png', 
   },
   {
     number: '002',
     title: 'Mithibai College',
-    imageUrl: '/images/Mithibai.png', // Assuming this is a local image
+    imageUrl: '/Images/Mithibai.png', // Assuming this is a local image
   },
   {
     number: '003',
     title: 'DJ Sanghvi College of Engineering',
-    imageUrl: '/images/DJSCE.png', // Assuming this is a local image
+    imageUrl: '/Images/DJSCE.png', // Assuming this is a local image
   },
 ];
 

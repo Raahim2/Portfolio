@@ -48,7 +48,7 @@ const projects = [
     techStack: ['Next.js', 'Tailwind CSS', 'MongoDB', 'GitHub Actions', 'JavaScript', 'React'],
     type: "web",
     timePeriod: "Recent",
-    thumbnailURL: "/Images/Banner/GitMax.png",
+    thumbnailURL: "/Images/Banner/Gitmax.png",
     videoSrc: ""
   },
   {

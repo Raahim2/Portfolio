@@ -28,7 +28,7 @@ const cardConfig = {
     statLabel: "Problems Solved", 
     statCount: "100+", 
     name: "LeetCode", 
-    logoUrl: "/SVG/Logo/leetcode.svg", // Place your LeetCode.svg here
+    logoUrl: "/SVG/Logo/Leetcode.svg", // Place your LeetCode.svg here
     link: "https://leetcode.com/u/Raahim2" 
   },
 };

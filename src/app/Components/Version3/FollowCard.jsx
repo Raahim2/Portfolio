@@ -65,7 +65,7 @@ const FollowCard = ({ type = 'LinkedIn', index = 0 }) => {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={`Visit my ${data.name} profile`}
-      className="p-8 flex flex-col justify-between w-full aspect-square h-auto md:h-[90vh]  cursor-pointer"
+      className="p-8 flex flex-col justify-between w-full aspect-square h-auto md:h-[90vh] "
       
       // Initial animation for the card itself
       initial="hidden"

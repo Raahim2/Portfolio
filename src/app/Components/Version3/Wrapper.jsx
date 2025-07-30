@@ -10,8 +10,6 @@ const PageWrapper = ({ children }) => {
   useEffect(() => {
     const handleMouseMove = (e) => {
       if (containerRef.current) {
-        // We use the containerRef for the listener to be more specific
-        // and pageX/pageY to get coordinates relative to the whole document
         const x = e.pageX;
         const y = e.pageY;
         containerRef.current.style.setProperty('--mouse-x', `${x}px`);

@@ -88,7 +88,7 @@ export default function HeroVideoDialog({
   return (
     <div className={cn("relative", className)}>
       <div
-        className="group relative cursor-pointer"
+        className="group relative"
         onClick={() => setIsVideoOpen(true)}
         aria-label="Open video dialog"
         role="button"

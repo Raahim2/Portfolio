@@ -107,3 +107,17 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+
+
+
+@layer base {
+  body {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="%230d0d0d" stroke="%23ffffff" stroke-width="2"/></svg>') 12 12, auto;
+  }
+
+  
+  a, button, [role="button"], input[type="submit"], input[type="button"] {
+    cursor: inherit;
+  }
+}

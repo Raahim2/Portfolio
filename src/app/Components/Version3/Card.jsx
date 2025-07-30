@@ -49,7 +49,7 @@ const Card = ({ number, title, imageUrl, index }) => {
   return (
     // (UPDATED) The main container is now a motion component to control the hover state
     <motion.div
-      className="flex flex-col p-8 sm:p-10 min-h-[480px] md:min-h-[520px] cursor-pointer"
+      className="flex flex-col p-8 sm:p-10 min-h-[480px] md:min-h-[520px]"
       initial="rest" // The default animation state
       whileHover="hover" // The state to transition to on hover
       animate="rest"     // Ensures it returns to the 'rest' state

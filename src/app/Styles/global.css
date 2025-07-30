@@ -121,3 +121,27 @@ body {
     cursor: inherit;
   }
 }
+
+
+::-webkit-scrollbar {
+  width: 8px; /* You can adjust this value */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-neutral-900; /* A very dark, almost black background */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-neutral-600 rounded-full; /* A lighter gray with rounded corners */
+  border: 2px solid theme('colors.neutral.900'); /* Creates a nice padding effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-neutral-500;
+}
+
+
+html {
+  scrollbar-width: thin; /* Can be "auto", "thin", or "none" */
+  scrollbar-color: theme('colors.neutral.600') theme('colors.neutral.900'); /* thumb-color track-color */
+}

@@ -377,10 +377,10 @@ const projects = [
   }
 ];
 
-import Navbar from "../Components/NavBar";
+import Navbar from "../../Components/Version2/NavBar";
 import React, { useState } from 'react';
-import ProjectCard from "../Components/ProjectCard";
-import Slide from '../Components/SlideAnimation';
+import ProjectCard from "../../Components/Version2/ProjectCard";
+import Slide from '../../Components/Version2/SlideAnimation';
 
 export default function Home() {
   const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('light');

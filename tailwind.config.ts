@@ -1,3 +1,5 @@
+// tailwind.config.ts
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +63,9 @@ export default {
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
   		},
+        cursor: {
+          torch: 'url(\'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="6" fill="%230d0d0d" stroke="%23ffffff" stroke-width="2"/></svg>\') 12 12, auto',
+        },
   		animation: {
   			rainbow: 'rainbow var(--speed, 2s) infinite linear',
   			shine: 'shine var(--duration) infinite linear',
@@ -91,6 +96,7 @@ export default {
   					backgroundPosition: 'var(--bg-size) 0'
   				}
   			}
+			
   		}
   	}
   },

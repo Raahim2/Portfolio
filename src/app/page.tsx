@@ -1,43 +1,34 @@
-"use client";
+"use client"; 
 
-import Navbar from "./Components/NavBar";
-import Header from "./Components/Header";
-import Themes from "./Components/Themes";
-import Stats from "./Components/Stats";
-import ProjectPage from "./Components/ProjectPage";
-import Education from "./Components/Education";
-import Skills from "./Components/Skills";
-import Footer from "./Components/Footer";
-import { useEffect, useState } from "react";
-import { cn } from "@/lib/utils";
-import AnimatedGridPattern from "@/components/ui/animated-grid-pattern";
+import NavBar from "@/app/Components/Version3/Navbar"
+import HeroSection from "@/app/Components/Version3/Hero";
+import Stats from "@/app/Components/Version3/Stats";
+import PageWrapper from "@/app/Components/Version3/Wrapper"; // <-- Import the new wrapper
+import EducationSection from "@/app/Components/Version3/Education"; // Import if you need it later
+import Experience from "@/app/Components/Version3/Experience"; // Import if you need it later
+import Projects from "@/app/Components/Version3/Projects"; // Import if you need it later
+import Skills from "./Components/Version3/Skills";
+import Follow from "./Components/Version3/Follow"; // Import if you need it later
+import ContactUs from "./Components/Version3/ContactUs"; // Import if you need it later
+import Footer from "./Components/Version3/Footer";
+
 
 export default function Home() {
-  const [theme, setTheme] = useState<'light' | 'dark' | 'fire' | 'luxury' | 'lightning' | 'hacker'>('lightning');
-
-
   return (
-    <div className="w-full h-screen">
-      <div>
-        <Navbar theme={theme}setTheme={setTheme}/>
-        <Header theme={theme}/>
-        <Themes theme={theme} setTheme={setTheme}/>
-        <Education theme={theme}/>
-        <Stats theme={theme} s1={23} s2={12} s3={16} s4={3}/>
-        <ProjectPage theme={theme}/>
-        <Skills theme={theme}/>
-        <Footer theme={theme}/>
-      </div>
-      <AnimatedGridPattern
-        numSquares={30}
-        maxOpacity={0.1}
-        duration={3}
-        repeatDelay={1}
-        className={cn(
-          "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)]",
-          "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12",
-        )}
-      />
-    </div>
+    <PageWrapper>
+      <main>
+        <NavBar/>
+        <HeroSection />
+        <Stats />
+        <EducationSection />
+        <Experience />
+        <Projects />
+        <Skills />
+        <Follow />
+        <ContactUs />
+        <Footer/>
+      </main>
+    </PageWrapper>
+    
   );
 }

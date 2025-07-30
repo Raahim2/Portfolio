@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Importing icons for collapse/expand
 import Info from "./Info";
-import { SkillCard } from "@/app/Components/SkillCard";
+import { SkillCard } from "@/app/Components/Version2/SkillCard";
 
 const skills = {
   programmingLanguages: ["C", "Java", "Javascript", "Typescript", "Python"],

@@ -3,31 +3,17 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-// Importing a variety of icons from react-icons
-import { 
-  SiChainlink, SiAmazons3, SiGooglecloud, SiNotion, SiJirasoftware,
-  SiDatadog,  SiVercel, SiNextdotjs
-} from 'react-icons/si';
-import { FaSalesforce, FaGoogleDrive } from 'react-icons/fa';
-import { TbLetterC, TbNumber9, TbMathFunction } from 'react-icons/tb';
-import Starter from './Starter'; // Assuming Starter.js is already animated
+import Starter from './Starter'; 
+import SkillCard from './SkillCard'; // Assuming SkillCard is a component for displaying skills
 
 // Array of integration logos.
 const integrations = [
-  { name: 'ElevenLabs', icon: TbLetterC }, 
-  { name: 'Chainlink', icon: TbLetterC },
-  { name: 'Vercel', icon: SiVercel },
-  { name: 'Next.js', icon: SiNextdotjs },
-  { name: 'Azure', icon: SiDatadog },
-  { name: 'Salesforce', icon: FaSalesforce },
-  { name: '9', icon: TbNumber9 },
-  { name: 'Datadog', icon: SiDatadog },
-  { name: 'Google Drive', icon: FaGoogleDrive },
-  { name: 'Amazon S3', icon: SiAmazons3 },
-  { name: 'Google Cloud', icon: SiGooglecloud },
-  { name: 'Jira', icon: SiJirasoftware },
-  { name: 'Notion', icon: SiNotion },
-  { name: 'Function', icon: TbMathFunction },
+  { name: 'React', },
+  { name: 'AndroidStudio', },
+  { name: 'Expo', },
+  { name: 'Kotlin', },
+  { name: 'Java', },
+  { name: 'Github', },
 ];
 
 // --- Animation Variants (Unchanged) ---
@@ -115,13 +101,7 @@ const Experience = () => {
             
             {/* Left Column: Animated Graphic */}
             <motion.div variants={leftColumnVariant}>
-              {/*
-                FIX: Replaced the problematic classes with a responsive approach.
-                1. `object-contain`: This is the key fix. It ensures the ENTIRE image is displayed without being cropped.
-                2. `max-h-[350px]`: On mobile (the default), this caps the image height, so it looks good on small screens.
-                3. `lg:min-h-[500px]`: On large screens, this restores the original minimum height, bringing back the desktop layout you liked.
-                4. `hover:scale-105`: Slightly reduced the hover scale for a more subtle effect.
-              */}
+              
               <img 
                 className="w-full max-h-[350px] lg:min-h-[500px] object-contain transition-transform duration-300 ease-in-out hover:scale-105"
                 src="/Images/VJTI.png" 
@@ -140,21 +120,20 @@ const Experience = () => {
               
               {/* Animated Logo Grid */}
               <motion.div 
-                className="grid grid-cols-5 sm:grid-cols-7 gap-3 sm:gap-4 mt-12"
+                className="grid grid-cols-5 sm:grid-cols-7 gap-3 sm:gap-4 mt-12 mx-auto"
                 variants={logoGridVariants}
               >
                 {integrations.map((item, index) => {
-                  const IconComponent = item.icon;
                   return (
-                    <motion.div
+                    <SkillCard
                       key={index}
-                      title={item.name}
-                      className="bg-white/5 p-3 rounded-lg flex items-center justify-center aspect-square transition-all duration-300 ease-in-out hover:bg-white/10 hover:scale-110 hover:shadow-lg hover:shadow-indigo-500/10"
-                      variants={logoItemVariant}
-                    >
-                       <IconComponent className="h-6 w-6 sm:h-7 sm:w-7 text-white/70" />
-                    </motion.div>
+                      name={item.name}
+                      outlineIconUrl={`/SVG/SkillsV3/Outline/${item.name}.svg`}
+                      filledIconUrl={`/SVG/SkillsV3/Filled/${item.name}.svg`}
+                      className="hover:scale-110 transition-transform duration-300 ease-in-out md:col-span-2  aspect-square"
+                    />
                   );
+                   
                 })}
               </motion.div>
             </motion.div>

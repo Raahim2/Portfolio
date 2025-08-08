@@ -21,7 +21,6 @@ const footerLinks = [
       { label: 'GitHub', href: 'https://github.com/Raahim2' },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/raahim-shaikh-5a186024a/' },
       { label: 'Leetcode', href: 'https://leetcode.com/u/Raahim2' },
-
       { label: 'Resume', href: '/RAAHIM.pdf' },
     ],
   },

@@ -1,9 +1,17 @@
 // src/components/Projects.js
 
-import React from 'react';
-import { motion } from 'framer-motion'; // Still need motion
+
+
+// src/components/Projects.js
+"use client";
+
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import Starter from './Starter';
-import ProjectCard from '../Version3/ProjectCard'; // Your ProjectCard component
+import ProjectCard from '../Version3/ProjectCard';
+import { Code2, Smartphone } from 'lucide-react'; // icons for selector
+
+// Your existing projects array
 
 const projects = [
   {
@@ -129,72 +137,205 @@ const projects = [
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Pyplot.png",
     videoSrc: ""
-  }
+  },
+
+  // apps
+{
+  title: "Sharpify",
+  description: "An image enhancement app built with React Native and Expo, designed to sharpen and improve image quality effortlessly.",
+  githubLink: "https://github.com/Raahim2/Sharpify",
+  link: "",
+  techStack: ["React Native", "Expo", "JavaScript", "Image Processing", "Android", "iOS"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+},
+{
+  title: "ArtSpark",
+  description: "A creative design app like Canva with 4 core features: Kaleidoscope Canvas, PixcerbArt, Icon Maker, and Mockup Maker, enabling users to create everything from pixel art to professional mockups.",
+  githubLink: "https://github.com/Raahim2/ArtSpark",
+  link: "",
+  techStack: ["React Native", "Expo", "JavaScript", "Canvas API", "Android", "iOS"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+},
+{
+  title: "Cyber Sheild",
+  description: "A Kotlin Jetpack Compose app for detecting phishing and malware threats, providing real-time protection and alerts.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/KOTLIN/CyberSheild",
+  link: "",
+  techStack: ["Kotlin", "Jetpack Compose", "Android", "Coroutines", "Security APIs", "Material Design"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+},
+{
+  title: "Speedometer",
+  description: "A Kotlin Jetpack Compose app that tracks and displays real-time speed using device GPS, ideal for driving, cycling, and running.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/KOTLIN/Speedometer",
+  link: "",
+  techStack: ["Kotlin", "Jetpack Compose", "Android", "GPS API", "Coroutines", "Material Design"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+},
+{
+  title: "Stats Tube",
+  description: "A Java-based Android app to analyze YouTube channels and videos, providing detailed statistics and insights for creators.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/JAVA/StatsTube",
+  link: "",
+  techStack: ["Java", "Android SDK", "YouTube Data API", "Material Design", "XML Layouts", "REST API"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+},
+{
+  title: "Counter",
+  description: "A simple yet powerful counter app built with React Native, allowing customizable counting features for various uses.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/Counter",
+  link: "",
+  techStack: ["React Native", "JavaScript", "Expo", "Android", "iOS", "State Management"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+},
+{
+  title: "Video Player",
+  description: "A React Native Expo video player app with smooth playback controls and support for multiple video formats.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/VideoPlayer",
+  link: "",
+  techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "Media Playback APIs"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Pyplot.png",
+  videoSrc: ""
+}
+
+
 ];
 
-
-// **IMPROVED ANIMATION VARIANTS**
+const projectTypes = ["web", "app"];
+const icons = {
+  web: <Code2 className="w-4 h-4" />,
+  app: <Smartphone className="w-4 h-4" />
+};
 
 // Container variant to orchestrate the stagger effect
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.2 // A slightly longer delay between cards
-    }
+    transition: { staggerChildren: 0.2 }
   }
 };
 
-// Item variant for a more pronounced "fade in and up" effect
+// Item variant for "fade in and up" effect
 const itemVariants = {
-  hidden: { y: 50, opacity: 0 }, // Start 50px lower
+  hidden: { y: 50, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: {
-      duration: 0.8, // Make the animation longer and smoother
-      ease: [0.17, 0.55, 0.55, 1] // A nice ease-out cubic bezier curve
-    }
-  }
+    transition: { duration: 0.8, ease: [0.17, 0.55, 0.55, 1] }
+  },
+  exit: { opacity: 0, scale: 0.9, y: -20, transition: { duration: 0.3 } }
+};
+
+const selectorVariants = {
+  hidden: { opacity: 0, y: -20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } }
 };
 
 const Projects = () => {
+  const [selectedType, setSelectedType] = useState(projectTypes[0]); // default to web
+  const [pillStyle, setPillStyle] = useState({});
+  const refs = useRef([]);
+
+  // Handle pill positioning (same logic as Skills)
+  useEffect(() => {
+    const handleResize = () => {
+      const selectedIndex = projectTypes.indexOf(selectedType);
+      const selectedButton = refs.current[selectedIndex];
+      if (selectedButton) {
+        if (window.innerWidth < 768) {
+          setPillStyle({
+            height: selectedButton.offsetHeight,
+            top: selectedButton.offsetTop,
+            width: '100%',
+            left: 0
+          });
+        } else {
+          setPillStyle({
+            width: selectedButton.offsetWidth,
+            left: selectedButton.offsetLeft,
+            height: '100%',
+            top: 0
+          });
+        }
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedType]);
+
+  const filteredProjects = projects.filter(p => p.type === selectedType);
+
   return (
     <div className="text-white pb-10 relative" id="projects">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        
         <Starter title={"Projects"} text1={"Built for real users."} text2={"Shipped with purpose."} />
 
-        <motion.div
-          className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ 
-            once: true, // Animate only once
-            amount: 0.1 // Trigger when 10% of the element is visible
-          }}
-        >
-          {projects.map((project, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <ProjectCard
-                title={project.title}
-                description={project.description}
-                techStack={project.techStack}
-                link={project.link}
-                githubLink={project.githubLink}
-                videoSrc={project.videoSrc}
-                thumbnailURL={project.thumbnailURL}
-                timePeriod={project.timePeriod}
-                projectType={project.type}
-              />
-            </motion.div>
-          ))}
+        {/* Variant Selector */}
+        <motion.div className="my-12" variants={selectorVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
+          <div className="relative flex flex-col md:flex-row w-full p-0 border border-zinc-800 rounded-lg overflow-hidden">
+            <div className="absolute bg-emerald-400 transition-all duration-300 ease-in-out" style={pillStyle} />
+
+            {projectTypes.map((option, index) => (
+              <button
+                key={option}
+                ref={(el) => (refs.current[index] = el)}
+                onClick={() => setSelectedType(option)}
+                className={`relative z-10 flex-1 flex items-center justify-center gap-2 py-4 px-4 text-sm font-medium transition-colors duration-300 
+                  focus:outline-none border-b border-zinc-800 last:border-b-0 
+                  md:border-b-0 md:border-r md:border-zinc-800 md:last:border-r-0
+                  ${selectedType === option ? 'text-zinc-900' : 'text-zinc-400 hover:text-white'}
+                `}
+              >
+                {icons[option] ? React.cloneElement(icons[option], { className: `w-4 h-4 transition-colors duration-300 ${selectedType === option ? 'text-zinc-900' : 'text-sky-500'}` }) : null}
+                <span className="capitalize">{option}</span>
+              </button>
+            ))}
+          </div>
         </motion.div>
+
+        {/* Project Cards */}
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedType}
+            className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+          >
+            {filteredProjects.map((project, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <ProjectCard {...project} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </div>
   );
-}
+};
+
 export default Projects;
-    

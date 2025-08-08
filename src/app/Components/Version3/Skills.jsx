@@ -35,7 +35,6 @@ const icons = {
   "Programming Languages": <Code className="w-4 h-4" />, 
   "Frameworks & Libraries": <Braces className="w-4 h-4" />, 
   "Tools & Platforms": <TerminalSquare className="w-4 h-4" />, 
-  "Others": <Shapes className="w-4 h-4" /> 
 };
 
 // --- ANIMATION VARIANTS ---

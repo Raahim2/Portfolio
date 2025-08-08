@@ -12,6 +12,7 @@ const navLinks = [
   { label: 'Education', id: 'education' },
   { label: 'Projects', id: 'projects' },
   { label: 'Contact', id: 'contact' },
+
 ];
 
 const Navbar = () => {
@@ -89,6 +90,13 @@ const Navbar = () => {
                     {link.label}
                   </a>
                 ))}
+
+                <a
+                    href='/version2'
+                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-300`}
+                  >
+                    Prev Version
+                  </a>
               </div>
             </div>
 

@@ -328,7 +328,7 @@ const Projects = () => {
           >
             {filteredProjects.map((project, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <ProjectCard {...project} />
+                <ProjectCard {...project} projectType={project.type} />
               </motion.div>
             ))}
           </motion.div>

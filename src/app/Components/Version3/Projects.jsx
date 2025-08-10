@@ -148,18 +148,18 @@ const projects = [
   techStack: ["React Native", "Expo", "JavaScript", "Image Processing", "Android", "iOS"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/Sharpify.png",
   videoSrc: ""
 },
 {
   title: "ArtSpark",
-  description: "A creative design app like Canva with 4 core features: Kaleidoscope Canvas, PixcerbArt, Icon Maker, and Mockup Maker, enabling users to create everything from pixel art to professional mockups.",
+  description: "App for creativity with 4 core features: Kaleidoscope Canvas, PixcelArt, Icon Maker, and Mockup Maker, enabling users to create everything for their projects.",
   githubLink: "https://github.com/Raahim2/ArtSpark",
   link: "",
   techStack: ["React Native", "Expo", "JavaScript", "Canvas API", "Android", "iOS"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/ArtSpark.png",
   videoSrc: ""
 },
 {
@@ -170,7 +170,7 @@ const projects = [
   techStack: ["Kotlin", "Jetpack Compose", "Android", "Coroutines", "Security APIs", "Material Design"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/CyberSheild.png",
   videoSrc: ""
 },
 {
@@ -181,7 +181,7 @@ const projects = [
   techStack: ["Kotlin", "Jetpack Compose", "Android", "GPS API", "Coroutines", "Material Design"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/Speedometer.png",
   videoSrc: ""
 },
 {
@@ -192,7 +192,7 @@ const projects = [
   techStack: ["Java", "Android SDK", "YouTube Data API", "Material Design", "XML Layouts", "REST API"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/StatsTube.png",
   videoSrc: ""
 },
 {
@@ -203,7 +203,7 @@ const projects = [
   techStack: ["React Native", "JavaScript", "Expo", "Android", "iOS", "State Management"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/Counter.png",
   videoSrc: ""
 },
 {
@@ -214,9 +214,33 @@ const projects = [
   techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "Media Playback APIs"],
   type: "app",
   timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Pyplot.png",
+  thumbnailURL: "/Images/Banner/VideoPlayer.png",
+  videoSrc: ""
+},
+{
+  title: "PicsAI",
+  description: "A cross-platform AI chatbot app built with React Native and Expo, enabling users to interact with advanced conversational AI for assistance.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/PicsAI",
+  link: "",
+  techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "Gemini API"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/PicsAI.png",
+  videoSrc: ""
+},
+{
+  title: "SuperMeals",
+  description: "A React Native app that provides healthy meal recipes and nutrition tips, helping users maintain a balanced diet.",
+  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/SuperMeals",
+  link: "",
+  techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "API"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/SuperMeals.png",
   videoSrc: ""
 }
+
+
 
 
 ];

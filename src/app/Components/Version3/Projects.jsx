@@ -34,7 +34,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Portfolio.png",
-    videoSrc: ""
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684167/m0mei13ea9xft8esqr4x.mp4"
   },
   
   {
@@ -49,6 +49,29 @@ const projects = [
     videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887048/PROJECTS-DEMO/asdmbxnggtdckzprn8lo.mp4"
   },
   {
+    title: "Frame PDF",
+    description: "Web-based file manager with PDF tools and file organization using Flask.",
+    githubLink: "https://github.com/Raahim2/Frame-PDF",
+    link: "https://frame-pdf.vercel.app/",
+    techStack: ['Vue JS', 'PDF lib', 'JavaScript', 'Tailwind CSS', 'PDF Processing'],
+    type: "web",
+    timePeriod: "Sem II",
+    thumbnailURL: "/Images/Banner/FramePDF.png",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684121/tluejw9vc0stwaiaoceg.mp4"
+  },
+ 
+  {
+    title: "CSV Analytics",
+    description: "Web-based tool to make different types to plots using matplotlib.",
+    githubLink: "https://github.com/Raahim2/CSV-Analytics/",
+    link: "https://django-pyplot.vercel.app",
+    techStack: ['Python', 'Django', 'HTML', 'Tailwind CSS', 'Matplotlib', 'Pandas' , 'Numpy'],
+    type: "web",
+    timePeriod: "Recent",
+    thumbnailURL: "/Images/Banner/CSVAnalytics.png",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684165/jhvc5kcqohpzforqlhsu.mp4"
+  },
+  {
     title: "GitMax",
     description: "Advance GitHub dashboard & automation system powered by AI.",
     githubLink: "https://github.com/Raahim2/GitMax",
@@ -57,7 +80,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Gitmax.png",
-    videoSrc: ""
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684120/ahiawber0ynsdapsfabe.mp4"
   },
   {
     title: "Online-Desktop",
@@ -68,7 +91,19 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Desktop.png",
-    videoSrc: ""
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684164/eeeoofhlnq7abrptcdph.mp4"
+  },
+  
+  {
+    title: "CountVision",
+    description: "A Smart Count app for counting anything using YOLO and object detection.",
+    githubLink: "https://github.com/Raahim2/CountVision",
+    link: "https://count-vision.vercel.app/",
+    techStack: ['Vue js',  'YOLO', 'Face Recognition', 'Tailwind CSS', 'JavaScript'],
+    type: "web",
+    timePeriod: "Sem II",
+    thumbnailURL: "/Images/Banner/CountVision.png",
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684119/hqdmlegwnuvcmhliibfe.mp4"
   },
   {
     title: "BrightHome",
@@ -79,7 +114,7 @@ const projects = [
     type: "web",
     timePeriod: "Sem II",
     thumbnailURL: "/Images/Banner/BrightHome.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887158/PROJECTS-DEMO/g4vctcdgfrwtbar3jokc.mp4"
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684160/jvrjhtbgnjnklibroo8i.mp4"
   },
    {
     title: "Fortify Web",
@@ -90,20 +125,9 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Fortify.png",
-    videoSrc: ""
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684178/or69vgy2r2vxvfwzhufy.mp4"
   },
  
-  {
-    title: "Smart-Attendance-System",
-    description: "Facial recognition-based attendance system using Flask and OpenCV.",
-    githubLink: "https://github.com/Raahim2/Smart-Attendance-System",
-    link: "https://smart-attendance-system-ten.vercel.app",
-    techStack: ['Flask', 'OpenCV', 'YOLO', 'Face Recognition', 'Python', 'HTML', 'Tailwind CSS', 'JavaScript'],
-    type: "web",
-    timePeriod: "Sem II",
-    thumbnailURL: "/Images/Banner/Attendance.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887208/PROJECTS-DEMO/jrjqwy7osdd6vixnk4le.mp4"
-  },
    {
     title: "Predictive-AI",
     description: "AI platform with ML predictions and scikit-learn models built on Django.",
@@ -113,31 +137,9 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/PredAI.png",
-    videoSrc: ""
+    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684120/tdgcv5zrppchpfwuatli.mp4"
   },
-  {
-    title: "File-Manager",
-    description: "Web-based file manager with PDF tools and file organization using Flask.",
-    githubLink: "https://github.com/Raahim2/File-Manager",
-    link: "https://file-manager-virid.vercel.app",
-    techStack: ['Flask', 'Python', 'HTML', 'JavaScript', 'Tailwind CSS', 'PDF Processing'],
-    type: "web",
-    timePeriod: "Sem II",
-    thumbnailURL: "/Images/Banner/FileManager.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887394/PROJECTS-DEMO/qwcsui81axnhlekylufb.mp4"
-  },
- 
-  {
-    title: "PyPlot",
-    description: "Web-based tool to make different types to plots using matplotlib.",
-    githubLink: "https://github.com/Raahim2/Synergy_MatrixOut",
-    link: "https://django-pyplot.vercel.app",
-    techStack: ['Python', 'Django', 'HTML', 'Tailwind CSS', 'Matplotlib', 'Pandas' , 'Numpy'],
-    type: "web",
-    timePeriod: "Recent",
-    thumbnailURL: "/Images/Banner/Pyplot.png",
-    videoSrc: ""
-  },
+  
 
   // apps
 {
@@ -193,7 +195,7 @@ const projects = [
   type: "app",
   timePeriod: "Recent",
   thumbnailURL: "/Images/Banner/Statstube.png",
-  videoSrc: ""
+  videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916227/PROJECTS-DEMO/fzpepxtaqxzkfrkas595.mp4"
 },
 {
   title: "Counter",

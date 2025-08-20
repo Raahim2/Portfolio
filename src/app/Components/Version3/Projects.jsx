@@ -64,7 +64,7 @@ const projects = [
     title: "CSV Analytics",
     description: "Web-based tool to make different types to plots using matplotlib.",
     githubLink: "https://github.com/Raahim2/CSV-Analytics/",
-    link: "https://django-pyplot.vercel.app",
+    link: "https://csv-analytics-snowy.vercel.app/",
     techStack: ['Python', 'Django', 'HTML', 'Tailwind CSS', 'Matplotlib', 'Pandas' , 'Numpy'],
     type: "web",
     timePeriod: "Recent",

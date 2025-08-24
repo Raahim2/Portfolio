@@ -4,9 +4,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Starter from './Starter';
 import ProjectCard from '../Version3/ProjectCard';
-import { Code2, Smartphone } from 'lucide-react'; // icons for selector
-
-// Your existing projects array
+import { Code2, Smartphone } from 'lucide-react';
 
 const projects = [
   {
@@ -236,11 +234,8 @@ const projects = [
   thumbnailURL: "/Images/Banner/SuperMeals.png",
   videoSrc: "/Videos/SuperMeals.mp4"
 }
-
-
-
-
 ];
+
 
 const projectTypes = ["web", "app"];
 const icons = {
@@ -248,24 +243,26 @@ const icons = {
   app: <Smartphone className="w-4 h-4" />
 };
 
-// Container variant to orchestrate the stagger effect
+// Container variant - ONLY for orchestrating stagger, no enter/exit
 const containerVariants = {
-  hidden: { opacity: 0 },
   visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.2 }
+    transition: { staggerChildren: 0.1, delayChildren: 0.1 }
   }
 };
 
-// Item variant for "fade in and up" effect
+// Item variant for individual card animation
 const itemVariants = {
-  hidden: { y: 50, opacity: 0 },
+  hidden: { y: 20, opacity: 0 },
   visible: {
     y: 0,
     opacity: 1,
-    transition: { duration: 0.8, ease: [0.17, 0.55, 0.55, 1] }
+    transition: { type: "spring", stiffness: 100 }
   },
-  exit: { opacity: 0, scale: 0.9, y: -20, transition: { duration: 0.3 } }
+  exit: {
+    y: -20,
+    opacity: 0,
+    transition: { duration: 0.2 }
+  }
 };
 
 const selectorVariants = {
@@ -274,11 +271,10 @@ const selectorVariants = {
 };
 
 const Projects = () => {
-  const [selectedType, setSelectedType] = useState(projectTypes[0]); // default to web
+  const [selectedType, setSelectedType] = useState(projectTypes[0]);
   const [pillStyle, setPillStyle] = useState({});
   const refs = useRef([]);
 
-  // Handle pill positioning (same logic as Skills)
   useEffect(() => {
     const handleResize = () => {
       const selectedIndex = projectTypes.indexOf(selectedType);
@@ -314,11 +310,10 @@ const Projects = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <Starter title={"Projects"} text1={"Built for real users."} text2={"Shipped with purpose."} />
 
-        {/* Variant Selector */}
+        {/* Variant Selector - No changes here */}
         <motion.div className="my-12" variants={selectorVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           <div className="relative flex flex-col md:flex-row w-full p-0 border border-zinc-800 rounded-lg overflow-hidden">
             <div className="absolute bg-emerald-400 transition-all duration-300 ease-in-out" style={pillStyle} />
-
             {projectTypes.map((option, index) => (
               <button
                 key={option}
@@ -337,23 +332,30 @@ const Projects = () => {
           </div>
         </motion.div>
 
-        {/* Project Cards */}
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={selectedType}
-            className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
-            {filteredProjects.map((project, index) => (
-              <motion.div key={index} variants={itemVariants}>
+        {/* --- CHANGE IS HERE --- */}
+        {/* Project Cards Grid Container */}
+        <motion.div
+          className="mt-12 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {/* AnimatePresence now wraps the list of items */}
+          <AnimatePresence>
+            {filteredProjects.map((project) => (
+              <motion.div
+                // KEY CHANGE: Use a unique, stable ID from the data, NOT the index.
+                key={project.title} 
+                variants={itemVariants}
+                // The 'exit' prop is automatically handled by AnimatePresence
+                // We don't need initial/animate here because the parent container orchestrates it
+                layout // Optional: Add for a smooth re-ordering animation if items change position
+              >
                 <ProjectCard {...project} projectType={project.type} />
               </motion.div>
             ))}
-          </motion.div>
-        </AnimatePresence>
+          </AnimatePresence>
+        </motion.div>
       </div>
     </div>
   );

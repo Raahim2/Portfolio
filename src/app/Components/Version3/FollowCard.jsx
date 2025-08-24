@@ -11,22 +11,22 @@ const VisitIcon = ({ className }) => (
 // --- UPDATED Card Configuration with real links and distinct logo paths ---
 const cardConfig = {
   LinkedIn: { 
-    statLabel: "Followers", 
-    statCount: "250+", 
+    statLabel: "Connections", 
+    statCount: "400+", 
     name: "LinkedIn", 
     logoUrl: "/SVG/Logo/LinkedIn.svg", // Place your LinkedIn.svg here
     link: "https://www.linkedin.com/in/raahim-shaikh-5a186024a/" // <-- ADD YOUR LINK
   },
   GitHub: { 
     statLabel: "Followers", 
-    statCount: "375+", 
+    statCount: "500+", 
     name: "GitHub", 
     logoUrl: "/SVG/Logo/Github.svg", // Place your GitHub.svg here
     link: "https://github.com/Raahim2" // <-- ADD YOUR LINK
   },
   LeetCode: { 
     statLabel: "Problems Solved", 
-    statCount: "100+", 
+    statCount: "150+", 
     name: "LeetCode", 
     logoUrl: "/SVG/Logo/Leetcode.svg", // Place your LeetCode.svg here
     link: "https://leetcode.com/u/Raahim2" 

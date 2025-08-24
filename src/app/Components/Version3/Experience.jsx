@@ -114,7 +114,7 @@ const Experience = () => {
                 App Developer Intern 
               </p>
               <h2 className="text-4xl md:text-5xl font-light text-neutral-200 tracking-tight leading-tight">
-                VJTI App developer <br /> made 10+ apps in 6 Months.
+                VJTI App developer <br /> made 6 apps in 6 Months.
               </h2>
               
               {/* Logo Grid */}

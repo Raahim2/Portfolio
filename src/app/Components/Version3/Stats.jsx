@@ -5,9 +5,9 @@ import CountUp from 'react-countup';
 import { motion } from 'framer-motion';
 
 const stats = [
-  { label: 'PROJECTS (All)', value: 24, suffix: '+' },
+  { label: 'PROJECTS (All)', value: 23, suffix: '+' },
   { label: 'EXPERIENCE (Months)', value: 6, suffix: ' ' },
-  { label: 'FOLLOWERS (Github)', value: 375, suffix: '+' },
+  { label: 'FOLLOWERS (Github)', value: 500, suffix: '+' },
 ];
 
 const containerVariants = {

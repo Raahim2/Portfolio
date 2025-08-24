@@ -113,7 +113,7 @@ const ContactUs = () => {
               Reach out and let’s see how we can create something amazing together.
             </motion.p>
             <motion.a
-              href="#"
+              href="mailto:devstudio.js@gmail.com"
               className="mt-8 inline-flex items-center justify-center px-6 py-3 bg-neutral-800 hover:bg-neutral-700/80 rounded-lg text-neutral-100 font-medium transition-colors duration-300"
               variants={textItemVariant}
             >

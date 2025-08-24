@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { createPortal } from "react-dom"; // Import createPortal
+import { AnimatePresence, motion } from "framer-motion";
 import { Play, XIcon } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -73,104 +74,104 @@ export default function HeroVideoDialog({
   className,
 }: HeroVideoProps) {
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  // MODIFICATION: Add a state to ensure we're on the client before creating the portal
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const selectedAnimation = animationVariants[animationStyle];
 
-  // Close on `Escape` key press
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsVideoOpen(false);
     };
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
-  }, []);
+
+    if (isVideoOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+      document.body.style.overflow = "auto";
+    };
+  }, [isVideoOpen]);
+
+
+  const VideoModal = (
+    <AnimatePresence>
+      {isVideoOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          onClick={() => setIsVideoOpen(false)}
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-md p-4 sm:p-6"
+          aria-modal="true"
+          role="dialog"
+        >
+          <motion.div
+            {...selectedAnimation}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            onClick={(e) => e.stopPropagation()}
+            className="relative flex w-full h-full max-w-5xl max-h-[90vh]"
+          >
+            <button
+              className="absolute top-2 right-2 z-10 p-2 rounded-full bg-black/50 text-white shadow-lg transition-colors hover:bg-black/75 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-black"
+              onClick={() => setIsVideoOpen(false)}
+              aria-label="Close video dialog"
+            >
+              <XIcon className="w-6 h-6" />
+            </button>
+            <iframe
+              src={videoSrc}
+              className="w-full h-full m-auto aspect-video rounded-lg shadow-2xl"
+              allowFullScreen
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              loading="lazy"
+              title="Video playback"
+            ></iframe>
+          </motion.div>
+        </motion.div>
+      )}
+    </AnimatePresence>
+  );
 
   return (
-    <div className={cn("relative", className)}>
-      <div
-        className="group relative"
-        onClick={() => setIsVideoOpen(true)}
-        aria-label="Open video dialog"
-        role="button"
-      >
-        <img
-          src={thumbnailSrc}
-          alt={thumbnailAlt}
-          className=" w-full h-auto rounded-md  shadow-lg transition-all duration-200 ease-out group-hover:brightness-75 object-cover"
-          loading="lazy"
-        />
-        <div className="absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-105">
-          <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">
-            <div className="relative flex size-14 items-center justify-center rounded-full bg-gradient-to-b from-primary/30 to-primary shadow-md">
-              <Play
-                className="size-6 text-white"
-                style={{
-                  filter:
-                    "drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))",
-                }}
-              />
+    <>
+      <div className={cn("relative", className)}>
+        <button
+          className="group relative w-full text-left"
+          onClick={() => setIsVideoOpen(true)}
+          aria-label="Open video player"
+        >
+          <img
+            src={thumbnailSrc}
+            alt={thumbnailAlt}
+            className="w-full h-auto rounded-md shadow-lg transition-all duration-200 ease-out group-hover:brightness-75 object-cover"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 flex items-center justify-center transition-transform duration-200 ease-out group-hover:scale-105">
+            <div className="flex size-20 items-center justify-center rounded-full bg-primary/10 backdrop-blur-md">
+              <div className="relative flex size-14 items-center justify-center rounded-full bg-gradient-to-b from-primary/30 to-primary shadow-md">
+                <Play
+                  className="size-6 text-white"
+                  style={{
+                    filter:
+                      "drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06))",
+                  }}
+                />
+              </div>
             </div>
           </div>
-        </div>
+        </button>
       </div>
 
-      <AnimatePresence>
-        {isVideoOpen && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setIsVideoOpen(false)}
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 backdrop-blur-md"
-            aria-hidden={!isVideoOpen}
-          >
-            <motion.div
-              {...selectedAnimation}
-              transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="relative mx-4 w-full max-w-4xl aspect-video"
-            >
-              <button
-                className="absolute -top-10 right-0 p-2 rounded-full bg-neutral-900/50 text-white shadow-lg focus:ring focus:ring-primary focus:ring-offset-2"
-                onClick={() => setIsVideoOpen(false)}
-                aria-label="Close video dialog"
-              >
-                <XIcon className="w-6 h-6" />
-              </button>
-              <iframe
-                src={videoSrc}
-                className="w-full h-full rounded-lg"
-                allowFullScreen
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                loading="lazy"
-                title="Video playback"
-              ></iframe>
-            </motion.div>
-
-            {/* <motion.div
-  {...selectedAnimation}
-  transition={{ type: "spring", damping: 25, stiffness: 200 }}
-  className="relative mx-4 w-full max-w-4xl flex items-center justify-center"
->
-  <button
-    className="absolute -top-10 right-0 p-2 rounded-full bg-neutral-900/50 text-white shadow-lg focus:ring focus:ring-primary focus:ring-offset-2"
-    onClick={() => setIsVideoOpen(false)}
-    aria-label="Close video dialog"
-  >
-    <XIcon className="w-6 h-6" />
-  </button>
-  <iframe
-    src={videoSrc}
-    className="max-h-[80vh] max-w-full rounded-lg object-contain"
-    allowFullScreen
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-    loading="lazy"
-    title="Video playback"
-  ></iframe>
-</motion.div> */}
-
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </div>
+      {isMounted ? createPortal(VideoModal, document.body) : null}
+    </>
   );
 }

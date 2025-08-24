@@ -1,8 +1,3 @@
-// src/components/Projects.js
-
-
-
-// src/components/Projects.js
 "use client";
 
 import React, { useState, useRef, useEffect } from 'react';
@@ -23,7 +18,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/DevStudio.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1749037446/k3hzh2qvapbrcrhx1ouv.mp4"
+    videoSrc: "/Videos/DevStudio.mp4"
   },
   {
     title: "Portfolio",
@@ -34,7 +29,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Portfolio.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684167/m0mei13ea9xft8esqr4x.mp4"
+    videoSrc: "/Videos/Portfolio.mp4"
   },
   
   {
@@ -57,7 +52,7 @@ const projects = [
     type: "web",
     timePeriod: "Sem II",
     thumbnailURL: "/Images/Banner/FramePDF.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684121/tluejw9vc0stwaiaoceg.mp4"
+    videoSrc: "/Videos/FramePDF.mp4"
   },
  
   {
@@ -69,7 +64,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/CSVAnalytics.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684165/jhvc5kcqohpzforqlhsu.mp4"
+    videoSrc: "/Videos/CSVAnalyser.mp4"
   },
   {
     title: "GitMax",
@@ -80,7 +75,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Gitmax.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684120/ahiawber0ynsdapsfabe.mp4"
+    videoSrc: "/Videos/GitMax.mp4"
   },
   {
     title: "Online-Desktop",
@@ -91,7 +86,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Desktop.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684164/eeeoofhlnq7abrptcdph.mp4"
+    videoSrc: "/Videos/OnlineDesktop.mp4"
   },
   
   {
@@ -103,7 +98,7 @@ const projects = [
     type: "web",
     timePeriod: "Sem II",
     thumbnailURL: "/Images/Banner/CountVision.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684119/hqdmlegwnuvcmhliibfe.mp4"
+    videoSrc: "/Videos/CountVision.mp4"
   },
   {
     title: "BrightHome",
@@ -114,7 +109,7 @@ const projects = [
     type: "web",
     timePeriod: "Sem II",
     thumbnailURL: "/Images/Banner/BrightHome.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684160/jvrjhtbgnjnklibroo8i.mp4"
+    videoSrc: "/Videos/BrightHome.mp4"
   },
    {
     title: "Fortify Web",
@@ -125,7 +120,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/Fortify.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684178/or69vgy2r2vxvfwzhufy.mp4"
+    videoSrc: "/Videos/Fortify.mp4"
   },
  
    {
@@ -137,7 +132,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/PredAI.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1755684120/tdgcv5zrppchpfwuatli.mp4"
+    videoSrc: "/Videos/PredictiveAI.mp4"
   },
   
 
@@ -151,23 +146,56 @@ const projects = [
   type: "app",
   timePeriod: "Recent",
   thumbnailURL: "/Images/Banner/Sharpify.png",
-  videoSrc: ""
+  videoSrc: "/Videos/Sharpify.mp4"
 },
 {
   title: "ArtSpark",
   description: "App for creativity with 4 core features: Kaleidoscope Canvas, PixcelArt, Icon Maker, and Mockup Maker, enabling users to create everything for their projects.",
   githubLink: "https://github.com/Raahim2/ArtSpark",
-  link: "https://github.com/Raahim2/ArtSpark/releases/download/GenTube/ArtSpark.apk",
+  link: "https://github.com/Raahim2/ArtSpark/releases/download/ArtSpark/ArtSpark.apk",
   techStack: ["React Native", "Expo", "JavaScript", "Canvas API", "Android", "iOS"],
   type: "app",
   timePeriod: "Recent",
   thumbnailURL: "/Images/Banner/ArtSpark.png",
-  videoSrc: ""
+  videoSrc: "/Videos/ArtSpark.mp4"
+},
+{
+  title: "Speedometer",
+  description: "A Kotlin Jetpack Compose app that tracks and displays real-time speed using device GPS, ideal for driving, cycling, and running.",
+  githubLink: "https://github.com/Raahim2/Speedometer",
+  link: "https://github.com/Raahim2/Speedometer/releases/download/init/Speedometer.apk",
+  techStack: ["Kotlin", "Jetpack Compose", "Android", "GPS API", "Coroutines", "Material Design"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Speedometer.png",
+  videoSrc: "/Videos/Speedometer.mp4"
+},
+{
+  title: "StatsTube",
+  description: "A Java-based Android app to analyze YouTube channels and videos, providing detailed statistics and insights for creators.",
+  githubLink: "https://github.com/Raahim2/StatsTube",
+  link: "https://github.com/Raahim2/StatsTube/releases/download/initial/app-debug.apk",
+  techStack: ["Java", "Android SDK", "YouTube Data API", "Material Design", "XML Layouts", "REST API"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Statstube.png",
+  videoSrc: "/Videos/Statstube.mp4"
+},
+{
+  title: "Counter",
+  description: "A simple yet powerful counter app built with React Native, allowing customizable counting features for various uses.",
+  githubLink: "https://github.com/Raahim2/Counter",
+  link: "https://github.com/Raahim2/Counter/releases/download/counter/Counter.apk",
+  techStack: ["React Native", "JavaScript", "Expo", "Android", "iOS", "State Management"],
+  type: "app",
+  timePeriod: "Recent",
+  thumbnailURL: "/Images/Banner/Counter.png",
+  videoSrc: "/Videos/Counter.mp4"
 },
 {
   title: "Cyber Sheild",
   description: "A Kotlin Jetpack Compose app for detecting phishing and malware threats, providing real-time protection and alerts.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/KOTLIN/CyberSheild",
+  githubLink: "https://github.com/NorzOman/Frortify",
   link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/KOTLIN/CyberSheild/CyberSheild.apk",
   techStack: ["Kotlin", "Jetpack Compose", "Android", "Coroutines", "Security APIs", "Material Design"],
   type: "app",
@@ -176,70 +204,37 @@ const projects = [
   videoSrc: ""
 },
 {
-  title: "Speedometer",
-  description: "A Kotlin Jetpack Compose app that tracks and displays real-time speed using device GPS, ideal for driving, cycling, and running.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/KOTLIN/Speedometer",
-  link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/KOTLIN/Speedometer/Speedometer.apk",
-  techStack: ["Kotlin", "Jetpack Compose", "Android", "GPS API", "Coroutines", "Material Design"],
-  type: "app",
-  timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Speedometer.png",
-  videoSrc: ""
-},
-{
-  title: "Stats Tube",
-  description: "A Java-based Android app to analyze YouTube channels and videos, providing detailed statistics and insights for creators.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/JAVA/StatsTube",
-  link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/JAVA/StatsTube/app-debug.apk",
-  techStack: ["Java", "Android SDK", "YouTube Data API", "Material Design", "XML Layouts", "REST API"],
-  type: "app",
-  timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Statstube.png",
-  videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735916227/PROJECTS-DEMO/fzpepxtaqxzkfrkas595.mp4"
-},
-{
-  title: "Counter",
-  description: "A simple yet powerful counter app built with React Native, allowing customizable counting features for various uses.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/Counter",
-  link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/REACT%20NATIVE/Counter/counter.apk",
-  techStack: ["React Native", "JavaScript", "Expo", "Android", "iOS", "State Management"],
-  type: "app",
-  timePeriod: "Recent",
-  thumbnailURL: "/Images/Banner/Counter.png",
-  videoSrc: ""
-},
-{
   title: "Video Player",
   description: "A React Native Expo video player app with smooth playback controls and support for multiple video formats.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/VideoPlayer",
-  link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/REACT%20NATIVE/VideoPlayer/VideoPlayer.apk",
+  githubLink: "https://github.com/Raahim2/VideoPlayer",
+  link: "https://github.com/Raahim2/VideoPlayer/releases/download/vidplayerv1/VideoPlayer.apk",
   techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "Media Playback APIs"],
   type: "app",
   timePeriod: "Recent",
   thumbnailURL: "/Images/Banner/VideoPlayer.png",
-  videoSrc: ""
+  videoSrc: "/Videos/VideoPlayer.mp4"
 },
 {
   title: "PicsAI",
   description: "A cross-platform AI chatbot app built with React Native and Expo, enabling users to interact with advanced conversational AI for assistance.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/PicsAI",
-  link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/REACT%20NATIVE/PicsAI/PicsAI.apk",
+  githubLink: "https://github.com/Raahim2/Pics-AI",
+  link: "https://github.com/Raahim2/Pics-AI/releases/download/picsai/PicsAI.apk",
   techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "Gemini API"],
   type: "app",
   timePeriod: "Recent",
   thumbnailURL: "/Images/Banner/PicsAI.png",
-  videoSrc: ""
+  videoSrc: "/Videos/PicsAI.mp4"
 },
 {
   title: "SuperMeals",
   description: "A React Native app that provides healthy meal recipes and nutrition tips, helping users maintain a balanced diet.",
-  githubLink: "https://github.com/Raahim2/Android-Developtment/tree/main/APPS/REACT%20NATIVE/SuperMeals",
-  link: "https://github.com/Raahim2/Android-Developtment/raw/refs/heads/main/APPS/REACT%20NATIVE/SuperMeals/SuperMeals.apk",
+  githubLink: "https://github.com/Raahim2/SuperMeals",
+  link: "https://github.com/Raahim2/SuperMeals/releases/download/supermeals/SuperMeals.apk",
   techStack: ["React Native", "Expo", "JavaScript", "Android", "iOS", "API"],
   type: "app",
   timePeriod: "Recent",
   thumbnailURL: "/Images/Banner/SuperMeals.png",
-  videoSrc: ""
+  videoSrc: "/Videos/SuperMeals.mp4"
 }
 
 

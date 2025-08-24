@@ -145,6 +145,29 @@ export default function HeroVideoDialog({
                 title="Video playback"
               ></iframe>
             </motion.div>
+
+            {/* <motion.div
+  {...selectedAnimation}
+  transition={{ type: "spring", damping: 25, stiffness: 200 }}
+  className="relative mx-4 w-full max-w-4xl flex items-center justify-center"
+>
+  <button
+    className="absolute -top-10 right-0 p-2 rounded-full bg-neutral-900/50 text-white shadow-lg focus:ring focus:ring-primary focus:ring-offset-2"
+    onClick={() => setIsVideoOpen(false)}
+    aria-label="Close video dialog"
+  >
+    <XIcon className="w-6 h-6" />
+  </button>
+  <iframe
+    src={videoSrc}
+    className="max-h-[80vh] max-w-full rounded-lg object-contain"
+    allowFullScreen
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+    loading="lazy"
+    title="Video playback"
+  ></iframe>
+</motion.div> */}
+
           </motion.div>
         )}
       </AnimatePresence>

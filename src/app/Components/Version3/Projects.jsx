@@ -39,7 +39,7 @@ const projects = [
     type: "web",
     timePeriod: "Recent",
     thumbnailURL: "/Images/Banner/MechaAI.png",
-    videoSrc: "https://res.cloudinary.com/defyovyob/video/upload/v1735887048/PROJECTS-DEMO/asdmbxnggtdckzprn8lo.mp4"
+    videoSrc: "/Videos/MechaAI.mp4"
   },
   {
     title: "Frame PDF",
